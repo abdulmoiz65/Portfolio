@@ -1,0 +1,305 @@
+/* html {
+    scroll-behavior:smooth ;
+} */
+*{
+    font-family:'Poppins', sans-serif;
+}
+
+header {
+    
+    height: 60px;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the items */
+    padding: 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    width: 100%;
+    justify-content: space-between;
+    position: relative; /* Ensure the button stays on the right */
+}
+
+header nav ul {
+    display: flex; /* Show the navbar items inline */
+    flex-direction: row;
+    margin: 0;
+    padding-right: 55px;
+    list-style: none;
+    align-items: center; /* Vertically center the items */
+    opacity: 0; /* Initially hide the list items */
+    transition: opacity 0.3s ease; /* Add transition to opacity */
+}
+
+header nav ul.active {
+    opacity: 1; /* Show the list items when active */
+}
+
+header nav ul li {
+    margin: 0 10px; /* Adjust margin for proper alignment */
+}
+
+header ul li a {
+    
+    color: black;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* Responsive font size */
+}
+header p {
+    font-weight: bold;
+}
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Ensure the button stays on the right */
+    z-index: 10; /* Ensure the hamburger button stays above other elements */
+    transition: transform 0.3s ease; /* Add transition to the button */
+}
+
+.hamburger.active {
+    transform: rotate(90deg); /* Rotate button when active */
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* hero  */
+.hero{
+    
+    height: 100vh;
+    width: 100%;
+    border: 1px solid;
+    background-color:hsl(0, 0%, 98%);
+}
+
+
+.hero img {
+    border-radius: 25px;
+    transform: rotate(15deg);
+    height: auto;
+    width: 50%;
+    box-shadow: -120px 40px  #ff4824;
+}
+
+
+.hero .arrow{
+    
+    font-size: 35px;
+    background: none;
+    border: none;
+    animation: move infinite  2s linear ;
+}
+.hero .arrow ion-icon{
+    color: black;
+}
+.experience {
+    display: flex;
+    
+    align-items: baseline;
+}
+.experience h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+.experience p{
+    color: gray;
+
+}
+
+@keyframes move {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* main  */
+.main{
+    border:1px solid;
+    width: 100%;
+    height: 700px;
+}
+.main .text{
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    
+}
+
+.main .progress {
+    margin-bottom: 18px;
+    height: 5px; 
+  }
+.main .progress .change{
+    background-color:  #ff4824;
+}
+
+.main-row img{
+    width: 35%;
+    height: auto;
+
+}
+
+/* contact */
+.contact{
+    background-color:hsl(0, 0%, 98%);
+    border: 2px solid;
+    padding: 25px;
+
+}
+.contact .details{
+    align-items: baseline;
+    /* display: flex; */
+}
+.contact .wrap{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.contact .details p{
+    margin-left: 3.5rem;
+}
+.contact .details ion-icon{
+
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* contact form  */
+
+.contact .contact-form {
+    background-color: white;
+    padding: 25px;
+    border: 2px solid;
+}
+
+.contact .contact-form .input-icon {
+    
+    
+    position: relative;      /* Enable positioning of children */
+    display: flex;            /* Align input and icon */
+    align-items: center;      /* Center icon vertically */
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+    border-radius: 20px;
+    background-color: hsl(0, 0%, 98%);
+    width: 100%;              /* Full width of the container */
+    height: 35px;
+    border: none;
+    padding-left: 40px;       /* Add padding to make space for the icon */
+    box-sizing: border-box;   /* Include padding in the element's total width */
+}
+
+.contact .contact-form textarea {
+    max-height: 200px;
+    min-height: 120px;
+}
+
+.contact .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact .contact-form ion-icon {
+    font-size: 25px;
+    position: absolute;      /* Position icon inside the input field */
+    left: 10px;              /* Align icon to the left */
+    color: #999;             /* Icon color */
+    pointer-events: none;    /* Prevent icon from blocking input */
+}
+
+.contact .contact-form .send {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    /* border: 1px solid #ccc; */
+    cursor: pointer;
+}
+
+.contact .contact-form .form-wrap {
+    margin-bottom: 15px;      /* Spacing between form elements */
+}
+
+/* socials  */
+
+.contact .socials  {
+    /* border: 2px solid; */
+    padding: 15px;
+    /* display: flex; */
+    }
+    .contact .socials ul  {
+        display: inline;
+        list-style: none;
+        }
+        
+        .contact .socials li {
+    justify-content: space-between;
+    text-decoration: none;
+    display: inline;
+
+    }
+    .contact .socials a{
+        margin: 5px;
+        text-decoration: none;
+        
+        }
+        
+        .contact .socials ion-icon{
+        font-size: 30px;
+        font-weight: bold;
+        padding: 8px;
+        border-radius: 100px;
+        color: gray;
+        background-color: black;
+    
+}
+
+/* footer */
+footer{
+    display: flex;
+    align-items: center;    
+    height: 120px;
+    background-color: black;   
+    }
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer p{
+
+    color: aliceblue;
+
+}
+
+
+/* Arrow  */
+.arrow-top ion-icon{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    color: black;
+    scroll-behavior: smooth;
+   
+}
