@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Animation Example</title>
+
+<style>
+    /* Basic styling for loader */
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Optional: Add a background color for visibility */
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  background: url('../Assets/images/Abdul_Moiz.jpg') center no-repeat;
+  background-size: contain;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+</style>
+</head>
+<body>
+<div class="loader-wrapper">
+  <div class="loader"></div>
+</div>
+<h1>Your Content Goes Here</h1>
+<!-- Replace with your actual content -->
+
+</body>
+<script>
+    // Optionally, you can add JavaScript to handle loading events
+// For example, to hide the loader once content is loaded:
+document.addEventListener("DOMContentLoaded", function() {
+  // Hide loader
+  document.querySelector('.loader-wrapper').style.display = 'none';
+});
+
+</script>
+</html>

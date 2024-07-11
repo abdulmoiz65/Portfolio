@@ -14,3 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// loader 
+
+function myLoader() {
+    let preloader = document.getElementById("loader");
+    preloader.style.display = "none";
+}
