@@ -9,33 +9,58 @@
     font-weight: 500;
     font-style: normal;
 }
+.custom-cursor {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    border-radius: 50%;
+    pointer-events: none; /* Make sure the cursor doesn't block any elements */
+    transition: transform 0.1s ease, background-color 0.1s ease; /* Smooth transition */
+    will-change: transform; /* Optimize performance */
+}
+body button {
+    background-color: #ff4824;
+    color: aliceblue;
+    border: none;
+}
+button:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+body h1{
+    font-size: 50px;
+
+     
+}
 
       /* Loader styling */
-      #loader {
+
+      /* #loader {
         border: 5px solid;
         position: fixed;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 9999;
-        width: 150px; /* Adjust size as needed */
-        height: 150px; /* Adjust size as needed */
+        width: 150px; 
+        height: 150px; 
         background: url('../Assets/images/Abdul_Moiz.jpg') no-repeat center center;
         background-size: contain;
-        display: block; /* Visible by default */
-        animation: spin 0.7s linear 1; /* Spin animation */
+        display: block; 
+        animation: spin 0.7s linear 1;
     }
     
-    /* Spin animation */
+  
     @keyframes spin {
         from { transform: translate(-50%, -50%) rotate(0deg); }
         to { transform: translate(-50%, -50%) rotate(360deg); }
     }
     
-    /* Hide main content initially */
+   
     #main-content {
         display: none;
-    }
+    } */
 
     .sticky {
         position: fixed;
@@ -57,59 +82,60 @@ header {
     background-color: hsl(0, 0%, 98%);
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Vertically center the items */
+    align-items: center;
     padding: 0 20px;
 }
 
 header nav {
     display: flex;
-    align-items: center; /* Vertically center the items */
+    align-items: center; 
     width: 100%;
     justify-content: space-between;
-    position: relative; /* Ensure the button stays on the right */
+    position: relative;
 }
 
 header nav ul {
-    display: flex; /* Show the navbar items inline */
+    display: flex; 
     flex-direction: row;
     margin: 0;
     padding-right: 55px;
     list-style: none;
-    align-items: center; /* Vertically center the items */
-    opacity: 0; /* Initially hide the list items */
-    transition: opacity 0.3s ease; /* Add transition to opacity */
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
 }
 
 header nav ul.active {
-    opacity: 1; /* Show the list items when active */
+    opacity: 1;
 }
 
 header nav ul li {
-    margin: 0 10px; /* Adjust margin for proper alignment */
+    margin: 0 10px;
 }
 
 header ul li a {
     
     color: black;
     text-decoration: none;
-    font-size: clamp(0.8rem, 2.5vw, 1.5rem); /* Responsive font size */
+    font-size: clamp(0.8rem, 2.5vw, 1.5rem); 
 }
 header p {
     font-weight: bold;
 }
 .hamburger {
+    color: black;
     background: none;
     border: none;
     font-size: 40px;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* Ensure the button stays on the right */
-    z-index: 10; /* Ensure the hamburger button stays above other elements */
-    transition: transform 0.3s ease; /* Add transition to the button */
+    right: 20px; 
+    z-index: 10; 
+    transition: transform 0.3s ease; 
 }
 
 .hamburger.active {
-    transform: rotate(90deg); /* Rotate button when active */
+    transform: rotate(90deg);
 }
 
 .logo {
@@ -121,74 +147,188 @@ header p {
   
   .logo img {
     border: 2px solid;
-    height: 40px; /* Adjust height as needed */
-    width: auto; /* Maintain aspect ratio */
+    height: 40px; 
+    width: auto;
+  }
+
+  /* HERO  */
+  .hero {
+    height: 85vh;
+    width: 100%;
+    background-color: hsl(0, 0%, 98%);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
   }
   
-
-/* hero  */
-.hero{
-    
-    height: 80vh;
-    width: 100%;
-    border: 1px solid;
-    background-color:hsl(0, 0%, 98%);
-}
-
-
-.hero img {
-    
-    box-shadow: 20px 30px 25px orangered;
-    border-radius: 25px;
-    /* transform: rotate(15deg); */
-    height: auto;
-    width: 50%;
-    /* box-shadow: -120px 40px  #ff4824; */
-}
-
-.hero .cv{
-
+  .hero h1 {
+    font-size: 5rem;
+    font-weight: bolder;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .hero h4 {
+    font-weight: bold;
+    color: #ff4824;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero span{
+    color: #ff4824;
+    text-transform: uppercase;
+    font-weight:900;
+  }
+  .hero .cv {
     border-radius: 50px;
-    margin-top: 20PX;
+    margin-top: 20px;
     margin-bottom: 25px;
-    padding: 15px 30px 15px 30px;
-    display: block;
-}
-
-.hero .arrow{
-    
+    padding: 15px 30px;
+    display: inline-block;
+  }
+  
+  .hero .arrow {
+  
     font-size: 35px;
     background: none;
     border: none;
-    animation: move infinite  2s linear ;
-}
-.hero .arrow ion-icon{
+    animation: move infinite 2s linear;
+  }
+  
+  .hero .arrow ion-icon {
+    position: absolute;
+    left: 30px;
+  
     color: black;
-}
-.experience {
+  }
+  
+  .experience {
     display: flex;
-    
+    justify-content: center;
     align-items: baseline;
-}
-.experience h2{
-    font-size: 30px;
+    margin-top: 20px;
+  }
+  
+  .experience h2 {
+    font-size: 2rem;
     font-weight: bold;
-    margin: 20px;
-}
-.experience p{
+    margin: 0 10px;
+  }
+  
+  .experience p {
     color: gray;
-
-}
-
-@keyframes move {
+  }
+  
+  @keyframes move {
     0%, 100% {
-        transform: translateY(0);
+      transform: translateY(0);
     }
     50% {
-        transform: translateY(-15px);
+      transform: translateY(-15px);
     }
-}
-
+  }
+  
+  @media (max-width: 1200px) {
+    .hero h1 {
+      font-size: 4rem;
+    }
+  
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero h4 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1.3rem;
+    }
+  
+    .experience h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .hero h1 {
+      font-size: 4rem;
+    }
+  
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+  
+    .hero h4 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 1.3rem;
+    }
+  
+    .experience h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      height: auto;
+      padding: 20px 10px;
+    }
+  
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.3rem;
+    }
+  
+    .hero h4 {
+      font-size: 1rem;
+    }
+  
+    .hero p {
+      font-size: 0.8rem;
+    }
+  
+    .experience h2 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero h2 {
+      font-size: 1rem;
+    }
+  
+    .hero h4 {
+      font-size: 0.9rem;
+    }
+  
+    .hero p {
+      font-size: 0.7rem;
+    }
+  
+    .experience h2 {
+      font-size: 1rem;
+    }
+  }
+  
 /* main  */
 .main {
     width: 100%;
@@ -254,123 +394,7 @@ header p {
     }
 }
 
-/* contact */
-.contact{
-    background-color:hsl(0, 0%, 98%);
-    border: 2px solid;
-    padding: 25px;
 
-}
-.contact .details{
-    align-items: baseline;
-    /* display: flex; */
-}
-.contact .wrap{
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-.contact .details p{
-    margin-left: 3.5rem;
-}
-.contact .details ion-icon{
-
-    font-size: 30px;
-    font-weight: bold;
-}
-
-/* contact form  */
-
-.contact .contact-form {
-    background-color: white;
-    padding: 25px;
-    border: 2px solid;
-}
-
-.contact .contact-form .input-icon {
-    
-    
-    position: relative;      /* Enable positioning of children */
-    display: flex;            /* Align input and icon */
-    align-items: center;      /* Center icon vertically */
-}
-
-.contact .contact-form input,
-.contact .contact-form textarea {
-    border-radius: 20px;
-    background-color: hsl(0, 0%, 98%);
-    width: 100%;              /* Full width of the container */
-    height: 35px;
-    border: none;
-    padding-left: 40px;       /* Add padding to make space for the icon */
-    box-sizing: border-box;   /* Include padding in the element's total width */
-}
-
-.contact .contact-form textarea {
-    max-height: 200px;
-    min-height: 120px;
-}
-
-.contact .contact-form label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.contact .contact-form ion-icon {
-    font-size: 25px;
-    position: absolute;      /* Position icon inside the input field */
-    left: 10px;              /* Align icon to the left */
-    color: #999;             /* Icon color */
-    pointer-events: none;    /* Prevent icon from blocking input */
-}
-
-.contact .contact-form .send {
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    color: white;
-    background-color: black;
-    /* border: 1px solid #ccc; */
-    cursor: pointer;
-}
-
-.contact .contact-form .form-wrap {
-    margin-bottom: 15px;      /* Spacing between form elements */
-}
-
-/* socials  */
-
-.contact .socials  {
-    /* border: 2px solid; */
-    padding: 15px;
-    /* display: flex; */
-    }
-    .contact .socials ul  {
-        display: inline;
-        list-style: none;
-        }
-        
-        .contact .socials li {
-    justify-content: space-between;
-    text-decoration: none;
-    display: inline;
-
-    }
-    .contact .socials a{
-        margin: 5px;
-        text-decoration: none;
-        
-        }
-        
-        .contact .socials ion-icon{
-        font-size: 30px;
-        font-weight: bold;
-        padding: 8px;
-        border-radius: 100px;
-        color: gray;
-        background-color: black;
-    
-}
 
 /* Project section styling */
 .project {
@@ -477,10 +501,10 @@ footer{
 footer a{
     color: white;
     text-decoration: none;
-}
+}   
 
 footer p{
-
+    text-align: center;
     color: aliceblue;
 
 }
@@ -498,3 +522,54 @@ footer p{
    
 }
 
+
+.hello {
+    align-content: center;
+    height: 550px;
+
+}
+
+.hello button {
+    margin: 35px;
+    height: 50px;
+    width: 125px;
+}
+.hello h1{
+    margin: 2rem;
+    font-weight: bolder;
+}
+
+
+.hello .socials  {
+    padding: 5px;
+    }
+    .hello .socials ul  {
+        display: inline;
+        list-style: none;
+        }
+        
+        .hello .socials li {
+    justify-content: space-between;
+    text-decoration: none;
+    display: inline;
+
+    }
+    .hello .socials a{
+        margin: 5px;
+        text-decoration: none;
+        
+        }
+        
+        .hello .socials ion-icon{
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 100px;
+        color: white;
+        background-color: black;
+    
+}
+.hello .socials ion-icon:hover{
+    background-color: #ff4824;
+    transition: 0.5s;
+}

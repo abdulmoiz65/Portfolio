@@ -36,21 +36,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   
+// cursor 
+document.addEventListener('mousemove', function(e) {
+  const cursor = document.querySelector('.custom-cursor');
+  cursor.style.transform = `translate(${e.pageX}px, ${e.pageY}px)`;
+
+  // Get the element under the cursor
+  const elementUnderCursor = document.elementFromPoint(e.clientX, e.clientY);
+  
+  // Check if the element has a black background
+  const bgColor = window.getComputedStyle(elementUnderCursor).backgroundColor;
+  
+  if (bgColor === 'rgb(0, 0, 0)') { // Check if the background color is black
+      cursor.style.backgroundColor = 'white';
+  } else {
+      cursor.style.backgroundColor = 'black';
+  }
+});
 
 
 // loader 
-document.addEventListener("DOMContentLoaded", function() {
-    // Show the loader when the DOM is fully loaded
-    let preloader = document.getElementById("loader");
-    preloader.style.display = "block";
-});
+// document.addEventListener("DOMContentLoaded", function() {
+  
+//     let preloader = document.getElementById("loader");
+//     preloader.style.display = "block";
+// });
 
-window.addEventListener("load", function() {
-    // Ensure the loader is shown for at least 2 seconds
-    let preloader = document.getElementById("loader");
-    let mainContent = document.getElementById("main-content");
-    setTimeout(function() {
-        preloader.style.display = "none";
-        mainContent.style.display = "block";
-    }, 1000); // 2 seconds
-});
+// window.addEventListener("load", function() {
+   
+//     let preloader = document.getElementById("loader");
+//     let mainContent = document.getElementById("main-content");
+//     setTimeout(function() {
+//         preloader.style.display = "none";
+//         mainContent.style.display = "block";
+//     }, 1000); 
+// });
