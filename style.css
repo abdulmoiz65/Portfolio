@@ -2,27 +2,59 @@
     scroll-behavior:smooth ;
 } */
 *{
-    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
-/* Loader styling */
-#loader {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    background: url('./Assets/images/Abdul_Moiz.jpg') no-repeat center center;
-    background-size: contain;
-    display: none; /* Hidden by default */
-  }
+      /* Loader styling */
+      #loader {
+        border: 5px solid;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        width: 150px; /* Adjust size as needed */
+        height: 150px; /* Adjust size as needed */
+        background: url('../Assets/images/Abdul_Moiz.jpg') no-repeat center center;
+        background-size: contain;
+        display: block; /* Visible by default */
+        animation: spin 0.7s linear 1; /* Spin animation */
+    }
+    
+    /* Spin animation */
+    @keyframes spin {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    
+    /* Hide main content initially */
+    #main-content {
+        display: none;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        background-color: white;
+        /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+        z-index: 1000; /* Ensure the navbar stays above other content */
+        transition: background-color 1s ease, box-shadow 1s ease; /* Smooth transition for background color and box shadow */
+      }
+      .sticky.slow-transition {
+        transition: background-color 1s ease, box-shadow 1s ease; /* Slow transition for background color and box shadow */
+      }
+      
+
 
 header {
     height: 60px;
     width: 100%;
-    background-color: beige;
+    background-color: hsl(0, 0%, 98%);
     display: flex;
     justify-content: space-between;
     align-items: center; /* Vertically center the items */
@@ -85,7 +117,14 @@ header p {
     padding: 0;
     flex-grow: 1;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-}
+  }
+  
+  .logo img {
+    border: 2px solid;
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
 
 /* hero  */
 .hero{
