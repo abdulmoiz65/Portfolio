@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Moiz</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./testing.css">
+    <script src="./testing.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <!-- favicon  -->
     <link rel="icon" type="image/png" href="./Assets/favicon.ico">
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-  
+    
   </head>
 
   <body onload="myLoader()">
@@ -54,7 +54,7 @@
           <p>I am a passionate software developer with over a year of freelancing experience.
              Currently pursuing a Bachelor's degree in Computer Science from <span>Muhammad Ali Jinnah University</span>, I enjoy turning ideas into reality through coding. I have successfully worked on various platforms like Upwork and Freelancer, specializing in creating solutions that meet client needs</p>
               <div class="experience">
-                <h2>1+</h2>
+                <h2>2+</h2>
                 <p>years of Experience</p>
                 <!-- <h2>50+</h2>
                 <p>Happy customers</p> -->
@@ -154,74 +154,57 @@
 </section>
 
 
-<section class="project">
  
-  <div class="container">
-    <div class="row justify-content-between">
-    <div class="col-lg-6">
-      <h1>My projects</h1>
-      <p>check out some of my projects with creative ideas </p>
+<section class="project">
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="project-text col-12">
+          <div>
+            <h1>My Projects</h1>
+            <p>Check out some of my projects with creative ideas</p>
+          </div>
+          <button id="project" >See all projects</button>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-6 d-flex justify-content-end  ">
-      <button  target="Download" id="project">See all projects</button>
+  
+    <div class="container">
+      <div class="row" id="projects-container">
+        <!-- Project cards will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title">Project Title</h2>
+        <span class="close" onclick="closeModal()">&times;</span>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div class="modal-body">
+            <img id="modal-image" src="" alt="Project Image" class="modal-image">
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="pro-link">
+            <h4>Project Link</h4>
+            <a id="modal-link" href="" target="_blank"></a>
+          </div>
+          <h4>About the Project</h4>
+          <p id="modal-description"></p>
+          <div class="skills">
+            <h3>Skills</h3>
+            <div id="modal-skills">
+              <!-- Skills will be dynamically inserted here -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-
-  <div class="container">
-
-
-    <div class="row webs justify-content-evenly ">
-      <div class="col-lg-5">
-        <h4>WEB DESIGN</h4>
-        <h1>Hadiths and dua's</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore 
-          nesciunt illum, veritatis situt in, expedita 
-          earum quam, quo ipsa fuga itaque cumque voluptate facilis reprehenderit temporibus hic ipsum?</p>
-          <a href="">See preject </a>
-        </div>
-        <div class="col-lg-6">
-          <a href=""><img src="./Assets/images/web.png" alt=""></a>
-        </div>
-
-    </div>
-
-    <div class="row webs justify-content-evenly">
-      <div class="col-lg-5">
-        <h4>WEB DESIGN</h4> 
-        <h1>Hadiths and dua's</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore 
-          nesciunt illum, veritatis situt in, expedita 
-          earum quam, quo ipsa fuga itaque cumque voluptate facilis reprehenderit temporibus hic ipsum?</p>
-          <a href="">See preject </a>
-        </div>
-        <div class="col-lg-6">
-          <a href=""><img src="./Assets/images/web.png" alt=""></a>
-        </div>
-
-    </div>
-
-    <div class="row webs  justify-content-evenly">
-      <div class="col-lg-5">
-        <h4>WEB DESIGN</h4>
-        <h1>Hadiths and dua's</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tempore 
-          nesciunt illum, veritatis situt in, expedita 
-          earum quam, quo ipsa fuga itaque cumque voluptate facilis reprehenderit temporibus hic ipsum?</p>
-          <a href="">See preject </a>
-        </div>
-        <div class="col-lg-6">
-          <a href=""><img src="./Assets/images/web.png" alt=""></a>
-        </div>
-
-    </div>
-
-    
-
-  </div>
-
-</section>
-
 
 
 
@@ -233,7 +216,7 @@
         <h1>Get In Touch</h1>
         <p>  
           My inbox is always open. Whether you're interested in a potential project, have a question, or just want to say hi, feel free to reach out. I'll do my best to respond to your email as soon as possible. I look forward to connecting with you!</p>
-        <button>say hello</button>
+        <button class="animated-border" ></button>
       </div>
       <div class="socials">
         <ul>
