@@ -81,6 +81,32 @@ window.addEventListener('load', updateCursorVisibility);
 window.addEventListener('resize', updateCursorVisibility);
 
 
+// Skills 
+function toggleSkills(type) {
+  var skillsList = document.getElementById('skills-list');
+  var toolsList = document.getElementById('tools-list');
+  var buttons = document.querySelectorAll('.toggle-btn');
+
+  if (type === 'skills') {
+    skillsList.style.display = 'flex';
+    toolsList.style.display = 'none';
+  } else {
+    skillsList.style.display = 'none';
+    toolsList.style.display = 'flex';
+  }
+
+  buttons.forEach(button => {
+    if (button.innerText.toLowerCase() === type) {
+      button.classList.add('active');
+    } else {
+      button.classList.remove('active');
+    }
+  });
+}
+
+
+
+
 
 // project Section 
 let projects = []; // Add this outside functions
