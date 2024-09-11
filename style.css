@@ -339,7 +339,6 @@ header p {
 /* Skills  */
 
 .skills {
-  border: 3px solid;
   padding: 60px 20px;
   background-color: #f7f7f7;
 }
@@ -451,7 +450,7 @@ header p {
 
 
 /* main  */
-.main {
+/* .main {
   width: 100%;
 }
 
@@ -470,19 +469,18 @@ header p {
   background-color: #ff4824;
 }
 
-/* Images in .main-row */
+
 .main-row img {
-  width: 50px; /* Set a fixed width for responsiveness */
+  width: 50px; 
   height: auto;
-  margin-bottom: 1rem; /* Add some space below the image */
+  margin-bottom: 1rem;
 }
 
-/* Ensure the container is responsive */
 .container-fluid {
-  padding: 0 15px; /* Adjust padding */
+  padding: 0 15px;
 }
 
-/* Media queries for smaller screens */
+
 @media (max-width: 992px) {
   .main .text {
       flex-direction: column;
@@ -501,19 +499,19 @@ header p {
       width: 30px;
   }
   .main .text h3, .main .text p {
-      font-size: 0.875rem; /* Adjust font size for smaller screens */
+      font-size: 0.875rem;
   }
 }
 
 @media (max-width: 576px) {
   .main-row .col-lg-2 {
-      flex: 0 0 100%; /* Full width on extra small screens */
+      flex: 0 0 100%; 
       max-width: 100%;
   }
   .main .text h3, .main .text p {
-      font-size: 0.75rem; /* Further adjust font size */
+      font-size: 0.75rem; 
   }
-}
+} */
 
 /* Project section styling */
 .project {
@@ -521,7 +519,6 @@ header p {
   padding: 25px;
 }
 
-/* Button styling */
 .project #project {
   border-radius: 50px;
   margin-top: 20px;
@@ -665,11 +662,11 @@ header p {
   cursor: pointer;
 }
 
-.skills {
+.modal .skills {
   margin-top: 20px;
 }
 
-.skill-badge {
+.modal .skill-badge {
   display: inline-block;
   margin: 5px 5px 5px 0;
   padding: 10px 15px;
