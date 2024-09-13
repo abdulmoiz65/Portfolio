@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moiz About</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+
+    .tab-container {
+      border: 1px solid #1f1f1f;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .tab-btn {
+      width: 100%;
+      padding: 16px;
+      background: #1f1f1f;
+      color: #fff;
+      transition: background 0.25s ease;
+      border: none;
+      border-bottom: 1px solid #1f1f1f;
+      font-weight: bold;
+    }
+    .tab-btn-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tab-btn-item {
+  flex: 1; /* Make each button take up equal space */
+}
+@media (max-width: 576px) {
+  .tab-btn-item {
+    width: 20%; /* 2 buttons per row on small screens */
+    /* min-width: 50%; */
+  } 
+  .title {
+    font-size: 10px;
+    
+  }
+}
+    .tab-btn.active, .tab-btn:hover {
+      background: #2c2c2c;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 30px;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fade 500ms linear forwards;
+    }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .img-holder {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .about-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+    .about-banner img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+    .section-title {
+      color: #1f1f1f;
+      font-family: 'Recoleta', serif;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-list {
+      margin-top: 20px;
+    }
+
+    .about-item {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .social-list {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .social-link {
+      color: #1f1f1f;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-link:hover {
+      color: #ffc107;
+    }
+
+    .progress-bar {
+      background-color: #2f2f2f;
+      height: 6px;
+      border-radius: 3px;
+    }
+
+    .progress-fill {
+      background-color: #ffc107;
+      height: 100%;
+      border-radius: 3px;
+    }
+        .education-list {
+    margin-top: 20px;
+    }
+
+    .education-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    }
+
+    .education-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .education-degree {
+    font-size: 1.5rem;
+    color: #1f1f1f;
+    margin-bottom: 10px;
+    }
+
+    .education-institute {
+    font-size: 1.1rem;
+    color: #6c757d;
+    }
+
+    .education-year {
+    font-size: 1rem;
+    color: #adb5bd;
+    }
+
+    @media (min-width: 576px) {
+      .tab-btn-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .tab-btn-item {
+        width: 50%;
+      }
+
+      .about-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .tab-btn-item {
+        width: 20%;
+      }
+
+      .grid-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .grid-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+    }
+    /* Skillset Section */
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.skill-list li {
+  margin-bottom: 20px;
+}
+
+.skill-wrapper {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #1f1f1f;
+}
+
+.value {
+  font-weight: bold;
+  color: #333;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  position: relative;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background-color: #ffc107;
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  transition: width 0.4s ease-in-out;
+}
+
+.skill-wrapper span {
+  font-size: 1.1rem;
+}
+
+.skill-wrapper .value {
+  color: #ffc107;
+}
+
+.skill-wrapper .span {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Responsive Design for Skillset */
+@media (max-width: 576px) {
+  .skill-wrapper {
+    font-size: 1rem;
+  }
+
+  .value {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .skill-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .skill-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* gap: px; */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="tab-container">
+        <ul class="nav nav-tabs tab-btn-list">
+          <li class="tab-btn-item">
+            <button class="tab-btn title h6 active" data-tab-btn="about">About Me</button>
+          </li>
+          <li class="tab-btn-item">
+            <button class="tab-btn title h6" data-tab-btn="skillset">Skillset</button>
+          </li>
+          <li class="tab-btn-item">
+            <button class="tab-btn title h6" data-tab-btn="interview">Education</button>
+          </li>
+          <li class="tab-btn-item">
+            <button class="tab-btn title h6" data-tab-btn="awward">Awards</button>
+          </li>
+         
+        </ul>
+
+        <div class="tab-content active" data-tab-content="about">
+           <div class="row">
+              <div class="col-lg-5 col-md-5">
+                <figure class="about-banner img-holder">
+                  <img src="./assets/images/moiz.jpeg" class="img-cover" alt="about banner">
+                </figure>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <h2 class="section-title">Exploring the Digital Frontier.</h2>
+                <p>I’m Moiz, a passionate web developer with a love for creating dynamic and user-friendly websites. My journey in web development started with a simple curiosity about how websites work, which quickly grew into a full-fledged passion for coding and design.</p>
+                <ul class="about-list">
+                 
+                  <li class="about-item">
+                    <p>Email Address</p>
+                    <span class="span h5">moiz@example.com</span>
+                  </li>
+                  <li class="about-item">
+                    <p>Social Network</p>
+                    <div class="social-list">
+                      <a href="#" class="social-link" title="Facebook">Fb.</a>
+                      <a href="#" class="social-link" title="LinkedIn">Ln.</a>
+                      <a href="#" class="social-link" title="GitHub">Gh.</a>
+                      <a href="#" class="social-link" title="Twitter">Tw.</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="tab-content" data-tab-content="skillset">
+            <div>
+              <h3 class="section-title">Transforming Ideas into Digital Solutions</h3>
+              <p>I specialize in creating efficient, user-centric digital solutions that enhance both functionality and aesthetics. My expertise spans across web development, design, and mobile applications, ensuring a seamless experience across platforms.</p>
+              
+              <ul class="skill-list">
+                
+                <li>
+                  <div class="skill-wrapper d-flex justify-content-between">
+                    <span class="span">Website Design</span>
+                    <span class="value">90%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 90%"></div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="skill-wrapper d-flex justify-content-between">
+                    <span class="span">Website Development</span>
+                    <span class="value">95%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 95%"></div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="skill-wrapper d-flex justify-content-between">
+                    <span class="span">UI / UX Design</span>
+                    <span class="value">85%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 85%"></div>
+                  </div>
+                </li>
+                
+                <li>
+                  <div class="skill-wrapper d-flex justify-content-between">
+                    <span class="span">Mobile Application Design</span>
+                    <span class="value">80%</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 80%"></div>
+                  </div>
+                </li>
+          
+              </ul>
+            </div>
+          </div>
+          
+
+        <div class="tab-content" data-tab-content="interview">
+            <h3 class="section-title">Education</h3>
+            <div class="education-list row">
+              <div class="col-md-3">
+                <div class="education-card">
+                  <h4 class="education-degree">Matriculation</h4>
+                  <p class="education-institute">Blossom High School Gulshan e iqbal karachi </p>
+                  <p class="education-year">Year of Completion: 2020</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="education-card">
+                  <h4 class="education-degree">Intermediate</h4>
+                  <p class="education-institute">Govt. degree college SRE-III majeed karachi</p>
+                  <p class="education-year">Year of Completion: 2022</p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="education-card">
+                  <h4 class="education-degree">Diploma in Software Development </h4>
+                  <p class="education-institute">Aptech Shahrah-e-faisal karachi</p>
+                  <p class="education-year">year of completion: FEB 2024</p>
+                </div>
+              </div>
+              <div class=" col-md-3 ">
+                <div class="education-card">
+                  <h4 class="education-degree">Bachelor's Degree</h4>
+                  <p class="education-institute">Muhammad Ali Jinnah University</p>
+                  <p class="education-year">Expected Completion: 2026</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="tab-content" data-tab-content="awward">
+
+            <h3 class="h4 title section-title">
+              We’re a team of creatives who are excited about unique ideas and help IT-tech companies to make identity
+              by crafting UI/UX.
+            </h3>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="award-card">
+                        <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
+                          <img src="./assets/images/awward-1.jpg" width="534" height="383" loading="lazy" alt="certificate"
+                            class="img-cover">
+                        </figure>
+                      </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="award-card">
+                        <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
+                          <img src="./assets/images/awward-1.jpg" width="534" height="383" loading="lazy" alt="certificate"
+                            class="img-cover">
+                        </figure>
+                      </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="award-card">
+                        <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
+                          <img src="./assets/images/awward-1.jpg" width="534" height="383" loading="lazy" alt="certificate"
+                            class="img-cover">
+                        </figure>
+                      </div>
+                </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.tab-btn').on('click', function(){
+        var target = $(this).data('tab-btn');
+        $('.tab-btn').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-content').removeClass('active');
+        $('[data-tab-content="' + target + '"]').addClass('active');
+      });
+    });
+  </script>
+</body>
+</html>

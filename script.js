@@ -1,3 +1,18 @@
+// jquery 
+$(document).ready(function(){
+  $('.tab-btn').on('click', function(){
+    var target = $(this).data('tab-btn');
+    $('.tab-btn').removeClass('active');
+    $(this).addClass('active');
+    $('.tab-content').removeClass('active');
+    $('[data-tab-content="' + target + '"]').addClass('active');
+  });
+});
+
+
+
+// JS 
+
 document.addEventListener('DOMContentLoaded', () => {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const navList = document.getElementById('nav-list');
