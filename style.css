@@ -2,7 +2,6 @@
     scroll-behavior:smooth ;
 } */
 *{
-    
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
@@ -26,7 +25,7 @@
     display: none;
   }
 }
-body button {
+/* body button {
   background-color: #ff4824;
   color: aliceblue;
   border: none;
@@ -34,12 +33,10 @@ body button {
 button:hover{
   background-color: black;
   transition: 0.5s;
-}
-body h1{
+} */
+/* body h1{
   font-size: 50px;
-
-   
-}
+} */
 
     /* Loader styling */
 
@@ -875,38 +872,64 @@ footer p{
   display: flex;
 }
 .Hire-text button{
-  
   margin: 35px;
   height: 50px;
   width: 125px;
 }
 
+@media (max-width:576px) {
+  .Hire h1{
+    margin: 15px;
+    font-size: 1.5rem;
+  }
+  .Hire button{
+    margin: 10px;
+    width: 130px;
+
+
+  } 
+}
+
+/* hire end  */
 
 /* about  */
 
-.tab-container {
-  margin: 2px;
-  /* border: 1px solid #1f1f1f; */
-  border-radius: 8px;
-  overflow: hidden;
+.about{
+  margin: 50px 0 20px 0;
+
 }
 
-.tab-btn {
+.about button{
   width: 100%;
   padding: 16px;
   background: #1f1f1f;
-  color: #fff;
+  /* color: #fff; */
   transition: background 0.25s ease;
   border: none;
   border-bottom: 1px solid #1f1f1f;
   font-weight: bold;
+}
+
+@media (max-width:576px) {
+ .about button{
+  text-wrap: balance;
+  font-size: 8px;
+  padding: 12px;
+  width: 90%;
+  margin: 10px;
+ } 
+}
+.about button:hover{
+  background-color: #ff4824;
 }
 .tab-btn-list {
 display: flex;
 justify-content: space-between;
 gap: 10px;
 }
-
+.about{
+  color: white;
+}
 .tab-btn-item {
 flex: 1; /* Make each button take up equal space */
 }
@@ -942,19 +965,17 @@ font-size: 10px;
 .img-holder {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+ 
 }
 
 .about-banner {
 width: 100%;
 height: auto;
-border-radius: 8px;
 overflow: hidden;
 }
 .about-banner img{
 width: 100%;
 height: auto;
-border-radius: 8px;
 overflow: hidden;
 }
 
@@ -967,9 +988,11 @@ object-fit: cover;
 
 .section-title {
   color: #1f1f1f;
-  font-family: 'Recoleta', serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
+}
+.about p{
+  color: #1f1f1f;
 }
 
 .about-list {
@@ -1102,13 +1125,14 @@ color: #333;
 .progress-bar {
 background-color: #e0e0e0;
 border-radius: 6px;
+border: #1f1f1f px solid;
 position: relative;
 height: 8px;
 overflow: hidden;
 }
 
 .progress-fill {
-background-color: #ffc107;
+background-color: #ff4824;
 height: 100%;
 border-radius: 6px;
 position: relative;
