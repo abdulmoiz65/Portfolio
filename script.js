@@ -189,6 +189,39 @@ window.onclick = function(event) {
 window.onload = fetchProjects;
 
 
+
+// ADWARDS MODEL 
+function openModal(src) {
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "block";
+  modalImg.src = src;
+}
+
+function CloseModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+
+// Attach click listeners to all images
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".award-card img");
+  images.forEach(img => {
+    img.addEventListener("click", function () {
+      openModal(this.src);
+    });
+  });
+
+  // Close modal if clicked outside the image
+  const modal = document.getElementById("imgModal");
+  modal.addEventListener("click", function (event) {
+    // If the clicked target is the modal background (not the image itself)
+    if (event.target === modal) {
+      CloseModal();
+    }
+  });
+});
+
+
 // loader 
 // document.addEventListener("DOMContentLoaded", function() {
 

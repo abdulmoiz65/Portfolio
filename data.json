@@ -1,8 +1,8 @@
 [
     {
       "title": "Agence Wojooh",
-      "frontImage": "./Assets/images/pizza-reservation.netlify.app.jpg",
-      "backImage": "./Assets/images/agence-wojooh.com.jpg",
+      "frontImage": "./Assets/images/maju-edu-pk-.jpg",
+      "backImage": "./Assets/images/maju-edu-pk-oric-php.jpg",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error necessitatibus, incidunt omnis debitis quae recusandae, commodi reiciendis sequi corrupti voluptatibus dolore accusamus ab! Quam maiores voluptatem quia error aliquid!",
       "link": "https://agence-wojooh.com/#",
       "skills": ["JavaScript", "HTML5", "Bootstrap", "CSS 3", "Web Design"]

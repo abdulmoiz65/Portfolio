@@ -14,7 +14,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    
+    <style>
+      #reviews{
+        background-color: hsl(0, 0%, 98%);
+      }
+      #reviews h1{
+        font-weight: bolder;
+      }
+      #reviews p{
+        font-size: 20px;
+        color: black;
+      }
+      #reviews .card{
+        border-radius: 0px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+      #reviews button{
+        border-radius: 0px !important;
+      }
+      #reviews .review-slider {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  #reviews .review-slider::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+    </style>
   </head>
 
   <body onload="myLoader()">
@@ -51,7 +80,7 @@
           <h4>Abdul Moiz</h4>
           <h1>Jr Software developer</h1>
           <h2>From Pakistan</h2>
-          <p>Proficiency in Web Development </p>
+          <p>Proficiency in Web Development (Using PHP , LARAVEL and DotNet)</p>
           <p>I am a passionate software developer with over a year of freelancing experience.
              Currently pursuing a Bachelor's degree in Computer Science from <span>Muhammad Ali Jinnah University</span>, I enjoy turning ideas into reality through coding. I have successfully worked on various platforms like Upwork and Freelancer, specializing in creating solutions that meet client needs</p>
               <div class="experience">
@@ -60,7 +89,7 @@
                 <!-- <h2>50+</h2>
                 <p>Happy customers</p> -->
                 </div>
-              <button  target="Download" class="cv">Download CV</button>
+                <a href="./AbdulMoiz_CV.pdf" target="_blank" class="cv">Download CV</a>
 
               
               <button class="arrow">
@@ -111,7 +140,7 @@
          <div class="row">
             <div class="col-lg-5 col-md-5">
               <figure class="about-banner img-holder">
-                <img src="./assets/images/moiz3.jpeg" class="img-cover" alt="about banner">
+                <img src="./Assets/images/moiz5.jpeg" class="img-cover" alt="about banner">
               </figure>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -210,7 +239,7 @@
             <div class="col-md-3">
               <div class="education-card">
                 <h4 class="education-degree">Diploma in Software Development </h4>
-                <p class="education-institute">Aptech Shahrah-e-faisal karachi</p>
+                <p class="education-institute">Aptech karachi</p>
                 <p class="education-year">year of completion: FEB 2024</p>
               </div>
             </div>
@@ -227,16 +256,15 @@
 
         <div class="tab-content" data-tab-content="awward">
 
-          <h3 class="h4 title section-title">
-            We’re a team of creatives who are excited about unique ideas and help IT-tech companies to make identity
-            by crafting UI/UX.
+          <h3 class="title section-title text-center ">
+            Notable Achievements & Awards
           </h3>
 
           <div class="row">
               <div class="col-lg-3">
                   <div class="award-card">
                       <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
-                        <img src="./assets/images/microsoft hackathon.jpg" width="534" height="383" loading="lazy" alt="certificate"
+                        <img src="./Assets/images/microsoft hackathon.jpg" width="534" height="383" loading="lazy" alt="certificate"
                           class="img-cover">
                       </figure>
                     </div>
@@ -244,7 +272,7 @@
               <div class="col-lg-3">
                   <div class="award-card">
                       <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
-                        <img src="./assets/images/front_end.jpg" width="534" height="383" loading="lazy" alt="certificate"
+                        <img src="./Assets/images/front_end.jpg" width="534" height="383" loading="lazy" alt="certificate"
                           class="img-cover">
                       </figure>
                     </div>
@@ -252,7 +280,7 @@
               <div class="col-lg-3">
                   <div class="award-card">
                       <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
-                        <img src="./assets/images/diploma.jpeg" width="534" height="383" loading="lazy" alt="certificate"
+                        <img src="./Assets/images/diploma.jpeg" width="534" height="383" loading="lazy" alt="certificate"
                           class="img-cover">
                       </figure>
                     </div>
@@ -261,7 +289,13 @@
 
         </div>
 
-     
+
+        <!-- ⬇️ Add this right after the above block -->
+<div id="imgModal" class="image-modal">
+  <span class="close-btn" onclick="CloseModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+        
 
     </div>
 
@@ -292,33 +326,33 @@
     
          <div class="skills-box col-lg-5 " id="skills-box">
            <ul class="skills-list" id="skills-list">
-             <li><div class="skill-card"><div class="tooltip">HTML5</div><img src="./assets/images/html5.png" alt="HTML5 logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">CSS3</div><img src="./assets/images/css3.png" alt="CSS3 logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">JavaScript</div><img src="./assets/images/javascript.png" alt="JavaScript logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">TypeScript</div><img src="./assets/images/typescript.png" alt="TypeScript logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">PHP</div><img src="./assets/images/php.png" alt="Php Logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">MySQL</div><img src="./assets/images/mySQL.png" alt="MySQL logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">React</div><img src="./assets/images/react.png" alt="React logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Bootstrap</div><img src="./assets/images/bootstrap.png" alt="Bootstrap logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Tailwind</div><img src="./assets/images/tailwind.png" alt="Tailwind logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Firebase</div><img src="./assets/images/firebase.png" alt="Firebase logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Angular</div><img src="./assets/images/angular.png" alt="Angular logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">SASS</div><img src="./assets/images/sass.png" alt="SASS logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">HTML5</div><img src="./Assets/images/html5.png" alt="HTML5 logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">CSS3</div><img src="./Assets/images/css3.png" alt="CSS3 logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">JavaScript</div><img src="./Assets/images/javascript.png" alt="JavaScript logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">TypeScript</div><img src="./Assets/images/typescript.png" alt="TypeScript logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">PHP</div><img src="./Assets/images/php.png" alt="Php Logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">MySQL</div><img src="./Assets/images/mySQL.png" alt="MySQL logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">React</div><img src="./Assets/images/react.png" alt="React logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Bootstrap</div><img src="./Assets/images/bootstrap.png" alt="Bootstrap logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Tailwind</div><img src="./Assets/images/tailwind.png" alt="Tailwind logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Firebase</div><img src="./Assets/images/firebase.png" alt="Firebase logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Angular</div><img src="./Assets/images/angular.png" alt="Angular logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">SASS</div><img src="./Assets/images/sass.png" alt="SASS logo"></div></li>
            </ul>
        
            <ul class="tools-list" id="tools-list" style="display:none;">
-               <li><div class="skill-card"><div class="tooltip">Git</div><img src="./assets/images/git.png" alt="Git logo"></div></li>
-               <li><div class="skill-card"><div class="tooltip">Trello</div><img src="./assets/images/trello.png" alt="Trello logo"></div></li>
-               <li><div class="skill-card"><div class="tooltip">Npm</div><img src="./assets/images/npm.png" alt="Npm logo"></div></li>
-               <li><div class="skill-card"><div class="tooltip">VS Code</div><img src="./assets/images/vs-code.png" alt="VS Code logo"></div></li>
-               <li><div class="skill-card"><div class="tooltip">Command Line</div><img src="./assets/images/command.png" alt="Command Line logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Figma</div><img src="./assets/images/figma.png" alt="Figma logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Docker</div><img src="./assets/images/docker.png" alt="Docker logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Linux</div><img src="./assets/images/linux.png" alt="linux logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">AWS</div><img src="./assets/images/aws.png" alt="AWS logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Slack</div><img src="./assets/images/slack.png" alt="Slack logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Photoshop</div><img src="./assets/images/photoshop.png" alt="Photoshop logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">Adobe XD</div><img src="./assets/images/adobe-xd.png" alt="Adobe XD logo"></div></li>
+               <li><div class="skill-card"><div class="tooltip">Git</div><img src="./Assets/images/git.png" alt="Git logo"></div></li>
+               <li><div class="skill-card"><div class="tooltip">Trello</div><img src="./Assets/images/trello.png" alt="Trello logo"></div></li>
+               <li><div class="skill-card"><div class="tooltip">Npm</div><img src="./Assets/images/npm.png" alt="Npm logo"></div></li>
+               <li><div class="skill-card"><div class="tooltip">VS Code</div><img src="./Assets/images/vs-code.png" alt="VS Code logo"></div></li>
+               <li><div class="skill-card"><div class="tooltip">Command Line</div><img src="./Assets/images/command.png" alt="Command Line logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Figma</div><img src="./Assets/images/figma.png" alt="Figma logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Docker</div><img src="./Assets/images/docker.png" alt="Docker logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Linux</div><img src="./Assets/images/linux.png" alt="linux logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">AWS</div><img src="./Assets/images/aws.png" alt="AWS logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Slack</div><img src="./Assets/images/slack.png" alt="Slack logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Photoshop</div><img src="./Assets/images/photoshop.png" alt="Photoshop logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Adobe XD</div><img src="./Assets/images/adobe-xd.png" alt="Adobe XD logo"></div></li>
            </ul>
          </div>
      </div>
@@ -380,6 +414,104 @@
   </div>
 
 
+  <section class="py-5  text-white" id="reviews">
+    <div class="container">
+      <h1 class="text-center mb-4 text-dark">What People Says</h1>
+  
+      <div class="position-relative">
+        <!-- Scrollable Cards -->
+        <div id="reviewSlider" class="review-slider d-flex gap-4 flex-nowrap">
+          
+          <!-- Review 1 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Moiz’s attention to detail is incredible. Highly recommended!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>Adam Brooks</strong><br>
+                <small>Product Designer</small>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Review 2 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Very responsive and talented developer. Great experience."</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>Lisa Chan</strong><br>
+                <small>Tech Founder</small>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Add more reviews here -->
+  
+        </div>
+  
+        <!-- Navigation arrows -->
+        <div class="text-center mt-4">
+          <button class="btn btn-outline-dark me-2 " onclick="scrollReviewSlider(-1)">&#8592;</button>
+          <button class="btn btn-outline-dark" onclick="scrollReviewSlider(1)">&#8594;</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
 
 <section class="hello">
   <div class="container">
@@ -432,6 +564,16 @@
 </div>
 
 </body>
+<script>
+  function scrollReviewSlider(direction) {
+    const slider = document.getElementById("reviewSlider");
+    const cardWidth = 320; // Width including margin
+    slider.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+  }
+</script>
+
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
