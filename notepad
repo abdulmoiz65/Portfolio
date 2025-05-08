@@ -1,0 +1,155 @@
+
+.portfolio {
+  background-color: #000;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.portfolio .title-wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portfolio .section-subtitle {
+  color: #666;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio .section-title {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.portfolio li {
+  list-style: none;
+}
+
+.portfolio .section-text {
+  color: #777;
+  font-size: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.portfolio .slider-wrapper {
+  position: relative;
+}
+
+.portfolio .slider {
+  overflow: hidden;
+  width: 100%;
+}
+.portfolio p{
+  color: white !important;
+  font-size: 1.2rem;
+}
+.portfolio h1{
+  font-size: 4rem !important;
+  font-weight: bolder;
+  color: #fff;  
+}
+
+.portfolio .slider-container {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s ease;
+  flex-wrap: nowrap; /* Always horizontal scroll */
+}
+
+.portfolio .slider-item {
+  flex-shrink: 0;
+  width: 32%;
+}
+
+.portfolio .portfolio-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  transition: 0.7s ease;
+}
+
+.portfolio .img-cover {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: 0.7s ease;
+  display: block;
+}
+
+.portfolio .card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: 0.7s ease;
+  width: 100%;
+  padding: 10px;
+}
+
+.portfolio .portfolio-card:hover .img-cover {
+  opacity: 0.2;
+  transform: scale(0.95);
+}
+
+.portfolio .portfolio-card:hover .card-content {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.portfolio .slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.portfolio .slider-control {
+  background: none;
+  border: 2px solid #222;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.portfolio .slider-control:hover {
+  background: #222;
+  color: #fff;
+}
+.portfolio .slider-control .arrow {
+border: 4px solid white;
+border-width: 0 2px 2px 0;
+padding: 5px;
+display: inline-block;
+transition: 0.3s ease;
+}
+
+.portfolio .slider-item a{
+  text-decoration: none;
+  color: #008cff;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.portfolio .slider-control.prev .arrow {
+transform: rotate(135deg); /* Left arrow */
+}
+
+.portfolio .slider-control.next .arrow {
+transform: rotate(-45deg); /* Right arrow - this was wrong before */
+}
+
+
+.portfolio .slider-control:hover .arrow {
+  border-color: #fff;
+}
