@@ -14,206 +14,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <style>
-      #reviews{
-        background-color: hsl(0, 0%, 98%);
-      }
-      #reviews h1{
-        font-weight: bolder;
-      }
-      #reviews p{
-        font-size: 20px;
-        color: black;
-      }
-      #reviews .card{
-        border-radius: 0px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
-      }
-      #reviews button{
-        border-radius: 0px !important;
-      }
-      #reviews .review-slider {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-  }
-
-  #reviews .review-slider::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
-  }
-
-
-
-  .portfolio {
-  background-color: white;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-.portfolio .title-wrapper {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.portfolio .section-subtitle {
-  color: #666;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.portfolio .section-title {
-  font-size: 32px;
-  margin: 10px 0;
-}
-
-.portfolio li {
-  list-style: none;
-}
-
-.portfolio .section-text {
-  color: #777;
-  font-size: 15px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.portfolio .slider-wrapper {
-  position: relative;
-}
-
-.portfolio .slider {
-  overflow: hidden;
-  width: 100%;
-}
-.portfolio p{
-  color: black !important;
-  font-size: 1.2rem;
-}
-.portfolio h1{
-  font-size: 4rem !important;
-  font-weight: bolder;
-  color: black;  
-}
-
-.portfolio .slider-container {
-  display: flex;
-  gap: 16px;
-  transition: transform 0.5s ease;
-  flex-wrap: nowrap; /* Always horizontal scroll */
-}
-
-.portfolio .slider-item {
-  flex-shrink: 0;
-  width: 32%;
-}
-
-.portfolio .portfolio-card {
-  border-radius: 10px;
-  overflow: hidden;
-  background: #000;
-  position: relative;
-  transition: 0.7s ease;
-}
-
-.portfolio .img-cover {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-  transition: 0.7s ease;
-  display: block;
-}
-
-.portfolio .card-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-55%, -50%);
-  color: white;
-  text-align: center;
-  opacity: 0;
-  transition: 0.7s ease;
-  width: 100%;
-  padding: 10px;
-}
-
-.portfolio .portfolio-card:hover .img-cover {
-  opacity: 0.2;
-  transform: scale(0.95);
-}
-
-.portfolio .portfolio-card:hover .card-content {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
-
-.portfolio .slider-controls {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 25px;
-}
-
-.portfolio .slider-control {
-  background: none;
-  border: 2px solid #222;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.portfolio .slider-control:hover {
-  background: #222;
-  color: #fff;
-}
-.portfolio .slider-control .arrow {
-border: 4px solid white;
-border-width: 0 2px 2px 0;
-padding: 5px;
-display: inline-block;
-transition: 0.3s ease;
-}
-
-.portfolio .slider-item a{
-  text-decoration: none;
-  color: #008cff;
-  font-size: 1.2rem;
-  font-weight: bolder;
-}
-
-.portfolio .slider-control.prev .arrow {
-transform: rotate(135deg); /* Left arrow */
-}
-
-.portfolio .slider-control.next .arrow {
-transform: rotate(-45deg); /* Right arrow - this was wrong before */
-}
-
-
-.portfolio .slider-control:hover .arrow {
-  border-color: #fff;
-}
-
-
-
-
-    </style>
   </head>
 
   <body onload="myLoader()">
+<!-- =============
+    CUSTOM CURSOR 
+================== -->
     <div class="custom-cursor"></div>
-  <!-- <div id="loader"></div> -->
+
+<!-- =============
+    PRE LOADER
+================== -->  
+
+    <!-- <div id="loader"></div> -->
 
 
   <div id="main-content">
 
+<!-- =============
+    NAVBAR START  
+================== -->    
   <header id="Navbar">
     <nav>
       <div class="logo">
@@ -231,9 +51,13 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
     </nav>
   </header>
 
+<!-- ===========
+    NAVBAR ENDS
+================ -->
 
-
-  <!-- hero -->
+<!-- =============
+    HERO SECTION 
+================== -->
   <section class="hero" id="hero" >
     <div class="container ">
       <div class="row  hero-row justify-content-center justify-content-md-center p-lg-5 p-md-5 ">
@@ -250,10 +74,9 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
                 <!-- <h2>50+</h2>
                 <p>Happy customers</p> -->
                 </div>
-                <a href="./AbdulMoiz_CV.pdf" target="_blank" class="cv">Download CV</a>
+                <button  target="Download" class="cv">Download CV</button>
 
-              
-              <button class="arrow">
+                <button class="arrow">
             <a href="#main">
             <ion-icon name="arrow-down-outline"></ion-icon>
           </a>
@@ -264,7 +87,13 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
     </div>
   </section>
 
-<!-- hire  -->
+<!-- ================
+    HERO SECTION ENDS
+===================== -->
+
+<!-- =============
+    HIRE SECTION
+================== -->
 
 <section class="Hire" >
   <div class="container">
@@ -276,9 +105,14 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
     </div>
   </div>
 </section>
-  
-<!-- about  -->
+<!-- ================
+    HERO SECTION ENDS
+===================== -->  
 
+
+<!-- ========================================
+  ABOUT SECTION ->(AWARDS, SKILLS, EDUCATION)
+=============================================-->
 <section class="about" id="about">
   <div class="container">
       <ul class="nav nav-tabs tab-btn-list">
@@ -327,59 +161,76 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
           </div>
         </div>
         
-
-        <div class="tab-content" data-tab-content="skillset">
-          <div>
-            <h3 class="section-title">Transforming Ideas into Digital Solutions</h3>
-            <p>I specialize in creating efficient, user-centric digital solutions that enhance both functionality and aesthetics. My expertise spans across web development, design, and mobile applications, ensuring a seamless experience across platforms.</p>
-            
-            <ul class="skill-list">
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">Website Design</span>
-                  <span class="value">90%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">Website Development</span>
-                  <span class="value">95%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 95%"></div>
-                </div>
-              </li>
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">UI / UX Design</span>
-                  <span class="value">85%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">Mobile Application Design</span>
-                  <span class="value">80%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
+        <!-- SKILLS  -->
+        <section class="services-section py-5 text-white tab-content " data-tab-content="skillset" >
+          <div class="container">
+            <!-- Section Heading -->
+            <div class="row mb-5">
+              <div class="col-lg-6">
+                <small class="text-uppercase" style="letter-spacing: 2px;">Services That We Provide</small>
+                <h2 class="display-5 fw-bold">Services</h2>
+              </div>
+              <div class="col-lg-6">
+                <p class="text-white">
+                  Whether you're building a digital presence from scratch or improving an existing one, these are the services I offer to help you succeed.
+                </p>
+              </div>
+            </div>
         
-            </ul>
+            <!-- Services Grid -->
+            <div class="row g-4">
+              <!-- Web Design & Development -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/world-wide-web.png" alt="Web Design" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">Web Design & Development</h5>
+                  <p class="text-muted">Crafting modern, responsive websites optimized for performance and user experience.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">01</span>
+                </div>
+              </div>
+        
+              <!-- UI/UX Development -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/web-design.png" alt="UI/UX" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">UI/UX Development</h5>
+                  <p class="text-muted">Creating intuitive user interfaces and seamless user experiences tailored for your audience.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">02</span>
+                </div>
+              </div>
+        
+              <!-- Mobile Design -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/booking.png" alt="Mobile Design" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">Mobile Design</h5>
+                  <p class="text-muted">Designing mobile-first experiences for Android & iOS that delight and perform.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">03</span>
+                </div>
+              </div>
+        
+              <!-- SEO Marketing -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/seo-search-symbol.png" alt="SEO Marketing" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">SEO Marketing</h5>
+                  <p class="text-muted">Boosting visibility and rankings with proven search engine optimization techniques.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">04</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
+        </section>
 
+        <!-- EDUCATION  -->
       <div class="tab-content" data-tab-content="interview">
           <h3 class="section-title">Education</h3>
           <div class="education-list row">
@@ -415,6 +266,7 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
         </div>
         
 
+        <!-- AWARDS  -->
         <div class="tab-content" data-tab-content="awward">
 
           <h3 class="title section-title text-center ">
@@ -449,23 +301,24 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
           </div>
 
         </div>
-
-
         <!-- ⬇️ Add this right after the above block -->
 <div id="imgModal" class="image-modal">
   <span class="close-btn" onclick="CloseModal()">&times;</span>
   <img class="modal-content" id="modalImg">
 </div>
-        
 
     </div>
 
   
 </section>
 
+<!-- =================
+    ABOUT SECTION ENDS
+====================== -->
 
-
-<!-- Skills  -->
+<!-- =============
+    SKILLS SECTION
+================== -->
 <section class="skills" id="skills">
   <div class="container">
  
@@ -520,9 +373,16 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
  
      </div>
        </section>
+      
+<!-- ==================
+    SKILLS SECTION ENDS
+======================= --> 
        
+<!-- ===============
+    PROJECTS SECTION
+==================== --> 
 
-       <section class="portfolio">
+       <section class="projects">
         <div class="title-wrapper">
           <p class="section-subtitle">Our Works</p>
           <h1 class="section-title">Projects</h1>
@@ -533,7 +393,7 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
           <div class="slider" id="portfolioSlider">
             <ul class="slider-container" id="sliderContainer">
               <li class="slider-item">
-                <div class="portfolio-card">
+                <div class="projects-card">
                   <img src="./Assets/images/portfolio-1.jpg" class="img-cover" alt="portfolio">
                   <div class="card-content">
                     <h3 class="card-title">SyntherX</h3>
@@ -543,7 +403,7 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
                 </div>
               </li>
               <li class="slider-item">
-                <div class="portfolio-card">
+                <div class="projects-card">
                   <img src="./Assets/images/portfolio-2.jpg" class="img-cover" alt="portfolio">
                   <div class="card-content">
                     <h3 class="card-title">Software Agency</h3>
@@ -553,7 +413,7 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
                 </div>
               </li>
               <li class="slider-item">
-                <div class="portfolio-card">
+                <div class="projects-card">
                   <img src="./Assets/images/portfolio-3.jpg" class="img-cover" alt="portfolio">
                   <div class="card-content">
                     <h3 class="card-title">Admin Portal</h3>
@@ -563,7 +423,7 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
                 </div>
               </li>
               <li class="slider-item">
-                <div class="portfolio-card">
+                <div class="projects-card">
                   <img src="./Assets/images/portfolio-4.jpg" class="img-cover" alt="portfolio">
                   <div class="card-content">
                     <h3 class="card-title">E commerce</h3>
@@ -573,7 +433,7 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
                 </div>
               </li>
               <li class="slider-item">
-                <div class="portfolio-card">
+                <div class="projects-card">
                   <img src="./Assets/images/portfolio-1.jpg" class="img-cover" alt="portfolio">
                   <div class="card-content">
                     <h3 class="card-title">Design Zoom</h3>
@@ -595,10 +455,13 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
           </div>
         </div>
       </section>
+<!-- ====================
+    PROJECTS SECTION ENDS
+========================= --> 
 
-
-
-
+<!-- ==================
+PROJECTS MODAL START
+======================= --> 
 
       <div id="myModal" class="modal">
         <div class="modal-content">
@@ -629,11 +492,13 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
           </div>
         </div>
       </div>
-      
+<!-- ==================
+    PROJECTS MODAL ENDS
+======================= -->       
 
-
-      
-
+<!-- ===============
+TESTIMONIALS SECTION
+==================== --> 
   <section class="py-5  text-white" id="reviews">
     <div class="container">
       <h1 class="text-center mb-4 text-dark">What People Says</h1>
@@ -731,7 +596,14 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
     </div>
   </section>
   
+<!-- ====================
+TESTIMONIALS SECTION ENDS
+========================= --> 
 
+
+<!-- ==============
+    CONTACT SECTION
+=================== --> 
 
 <section class="hello">
   <div class="container">
@@ -762,44 +634,43 @@ transform: rotate(-45deg); /* Right arrow - this was wrong before */
     </div>
   </div>
 </section>
+<!-- ==================
+    CONTACT SECTION ENDS
+======================= --> 
 
+<!-- =============
+    FOOTER SECTION
+================== --> 
 <footer>
   <div class="container">
     <div class="row ">
       <p> Thank You </p>
     </div>
   </div>
-  
 </footer>
+<!-- ==================
+    FOOTER SECTION ENDS
+======================= --> 
 
 
+<!--=========
+    ARROW TOP
+============= --> 
 <div class="arrow-top">
   <a href="#Navbar">
   <ion-icon name="arrow-up-circle-outline"></ion-icon>
 </a>
 </div>
-
-
+<!-- =============
+    ARROW TOP ENDS
+================== --> 
 
 </div>
-
 </body>
-<script>
-
-
-// TESTIMONIALS 
-  function scrollReviewSlider(direction) {
-    const slider = document.getElementById("reviewSlider");
-    const cardWidth = 320; // Width including margin
-    slider.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-  }
-</script>
-
+</html>
 
 <script src="./P.js" ></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</html>

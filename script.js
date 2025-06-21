@@ -221,6 +221,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// TESTIMONIALS/REVIEWS
+function scrollReviewSlider(direction) {
+  const slider = document.getElementById("reviewSlider");
+  const cardWidth = 320; // Width including margin
+  slider.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+}
 
 // loader 
 // document.addEventListener("DOMContentLoaded", function() {

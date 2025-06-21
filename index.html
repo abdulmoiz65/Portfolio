@@ -14,16 +14,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    
   </head>
 
   <body onload="myLoader()">
+<!-- =============
+    CUSTOM CURSOR 
+================== -->
     <div class="custom-cursor"></div>
-  <!-- <div id="loader"></div> -->
+
+<!-- =============
+    PRE LOADER
+================== -->  
+
+    <!-- <div id="loader"></div> -->
 
 
   <div id="main-content">
 
+<!-- =============
+    NAVBAR START  
+================== -->    
   <header id="Navbar">
     <nav>
       <div class="logo">
@@ -35,15 +45,19 @@
       <ul id="nav-list">
         <li><a href="">Home</a></li>
         <li><a href="">Project</a></li>
-        <li><a href="#hero">About</a></li>
+        <li><a href="#HERO">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+<!-- ===========
+    NAVBAR ENDS
+================ -->
 
-
-  <!-- hero -->
+<!-- =============
+    HERO SECTION 
+================== -->
   <section class="hero" id="hero" >
     <div class="container ">
       <div class="row  hero-row justify-content-center justify-content-md-center p-lg-5 p-md-5 ">
@@ -51,7 +65,7 @@
           <h4>Abdul Moiz</h4>
           <h1>Jr Software developer</h1>
           <h2>From Pakistan</h2>
-          <p>Proficiency in Web Development </p>
+          <p>Proficiency in Web Development (Using PHP , LARAVEL and DotNet)</p>
           <p>I am a passionate software developer with over a year of freelancing experience.
              Currently pursuing a Bachelor's degree in Computer Science from <span>Muhammad Ali Jinnah University</span>, I enjoy turning ideas into reality through coding. I have successfully worked on various platforms like Upwork and Freelancer, specializing in creating solutions that meet client needs</p>
               <div class="experience">
@@ -60,10 +74,9 @@
                 <!-- <h2>50+</h2>
                 <p>Happy customers</p> -->
                 </div>
-              <button  target="Download" class="cv">Download CV</button>
+                <button  target="Download" class="cv">Download CV</button>
 
-              
-              <button class="arrow">
+                <button class="arrow">
             <a href="#main">
             <ion-icon name="arrow-down-outline"></ion-icon>
           </a>
@@ -74,6 +87,13 @@
     </div>
   </section>
 
+<!-- ================
+    HERO SECTION ENDS
+===================== -->
+
+<!-- =============
+    HIRE SECTION
+================== -->
 
 <section class="Hire" >
   <div class="container">
@@ -85,9 +105,204 @@
     </div>
   </div>
 </section>
+<!-- ================
+    HERO SECTION ENDS
+===================== -->  
 
 
-<!-- Skills  -->
+<!-- ========================================
+  ABOUT SECTION ->(AWARDS, SKILLS, EDUCATION)
+=============================================-->
+<section class="about" id="about">
+  <div class="container">
+      <ul class="nav nav-tabs tab-btn-list">
+        <li class="tab-btn-item">
+          <button class="tab-btn  h6 active" data-tab-btn="about">About Me</button>
+        </li>
+        <li class="tab-btn-item">
+          <button class="tab-btn  h6" data-tab-btn="skillset">Skillset</button>
+        </li>
+        <li class="tab-btn-item">
+          <button class="tab-btn  h6" data-tab-btn="interview">Education</button>
+        </li>
+        <li class="tab-btn-item">
+          <button class="tab-btn  h6" data-tab-btn="awward">Awards</button>
+        </li>
+       
+      </ul>
+
+      <div class="tab-content active" data-tab-content="about">
+         <div class="row">
+            <div class="col-lg-5 col-md-5">
+              <figure class="about-banner img-holder">
+                <img src="./Assets/images/moiz5.jpeg" class="img-cover" alt="about banner">
+              </figure>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <h2 class="section-title">Exploring the Digital Frontier.</h2>
+              <p>I’m Moiz, a passionate web developer with a love for creating dynamic and user-friendly websites. My journey in web development started with a simple curiosity about how websites work, which quickly grew into a full-fledged passion for coding and design.</p>
+              <ul class="about-list">
+               
+                <li class="about-item">
+                  <p>Email Address</p>
+                  <span class="span h5">moiz@example.com</span>
+                </li>
+                <li class="about-item">
+                  <p>Social Network</p>
+                  <div class="social-list">
+                    <a href="#" class="social-link" title="Facebook">Fb.</a>
+                    <a href="#" class="social-link" title="LinkedIn">Ln.</a>
+                    <a href="#" class="social-link" title="GitHub">Gh.</a>
+                    <a href="#" class="social-link" title="Twitter">Tw.</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- SKILLS  -->
+        <div class="tab-content" data-tab-content="skillset">
+          <div>
+            <h3 class="section-title">Transforming Ideas into Digital Solutions</h3>
+            <p>I specialize in creating efficient, user-centric digital solutions that enhance both functionality and aesthetics. My expertise spans across web development, design, and mobile applications, ensuring a seamless experience across platforms.</p>
+            
+            <ul class="skill-list">
+              
+              <li>
+                <div class="skill-wrapper d-flex justify-content-between">
+                  <span class="span">Website Design</span>
+                  <span class="value">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+              
+              <li>
+                <div class="skill-wrapper d-flex justify-content-between">
+                  <span class="span">Website Development</span>
+                  <span class="value">95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%"></div>
+                </div>
+              </li>
+              
+              <li>
+                <div class="skill-wrapper d-flex justify-content-between">
+                  <span class="span">UI / UX Design</span>
+                  <span class="value">85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </li>
+              
+              <li>
+                <div class="skill-wrapper d-flex justify-content-between">
+                  <span class="span">Mobile Application Design</span>
+                  <span class="value">80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+        
+            </ul>
+          </div>
+        </div>
+        
+
+        <!-- EDUCATION  -->
+      <div class="tab-content" data-tab-content="interview">
+          <h3 class="section-title">Education</h3>
+          <div class="education-list row">
+            <div class="col-md-3">
+              <div class="education-card">
+                <h4 class="education-degree">Matriculation</h4>
+                <p class="education-institute">Blossom High School Gulshan e iqbal karachi </p>
+                <p class="education-year">Year of Completion: 2020</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="education-card">
+                <h4 class="education-degree">Intermediate</h4>
+                <p class="education-institute">Govt. degree college SRE-III majeed karachi</p>
+                <p class="education-year">Year of Completion: 2022</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="education-card">
+                <h4 class="education-degree">Diploma in Software Development </h4>
+                <p class="education-institute">Aptech karachi</p>
+                <p class="education-year">year of completion: FEB 2024</p>
+              </div>
+            </div>
+            <div class=" col-md-3 ">
+              <div class="education-card">
+                <h4 class="education-degree">Bachelor's Degree</h4>
+                <p class="education-institute">Muhammad Ali Jinnah University</p>
+                <p class="education-year">Expected Completion: 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- AWARDS  -->
+        <div class="tab-content" data-tab-content="awward">
+
+          <h3 class="title section-title text-center ">
+            Notable Achievements & Awards
+          </h3>
+
+          <div class="row">
+              <div class="col-lg-3">
+                  <div class="award-card">
+                      <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
+                        <img src="./Assets/images/microsoft hackathon.jpg" width="534" height="383" loading="lazy" alt="certificate"
+                          class="img-cover">
+                      </figure>
+                    </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="award-card">
+                      <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
+                        <img src="./Assets/images/front_end.jpg" width="534" height="383" loading="lazy" alt="certificate"
+                          class="img-cover">
+                      </figure>
+                    </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="award-card">
+                      <figure class="card-banner img-holder" style="--width: 534; --height: 383;" data-tilt>
+                        <img src="./Assets/images/diploma.jpeg" width="534" height="383" loading="lazy" alt="certificate"
+                          class="img-cover">
+                      </figure>
+                    </div>
+              </div>
+          </div>
+
+        </div>
+        <!-- ⬇️ Add this right after the above block -->
+<div id="imgModal" class="image-modal">
+  <span class="close-btn" onclick="CloseModal()">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+    </div>
+
+  
+</section>
+
+<!-- =================
+    ABOUT SECTION ENDS
+====================== -->
+
+<!-- =============
+    SKILLS SECTION
+================== -->
 <section class="skills" id="skills">
   <div class="container">
  
@@ -142,144 +357,237 @@
  
      </div>
        </section>
-       
-
-
-
-<!-- main  -->
-<!-- <section class="main p-lg-5" id="main">
-  <div class="container-fluid">
-      <div class="row justify-content-evenly m-lg-5 m-md-0">
-          <div class="col-lg-5 col-md-6 col-sm-12">
-              <h1>What I do?</h1>
-              <p>Lorem ips, voluptatum molestiae exercitationem dolor eveniet officia eaque animi. Molestiae, deleniti voluptatum? Reprehenderit, provident. Aliquam, atque. Explicabo consequuntur corrupti rem maiores. Nesciunt repudiandae commodi praesentium ipsa illum deserunt earum, animi ut pariatur consequatur sapiente? Id enim similique rerum. Sunt, eos sit consequatur ipsum, incidunt dolore ad quod eveniet beatae laboriosam illum rem dolores iure dolorem quia velit nisi perspiciatis dolorum. Deleniti, illum, perspiciatis molestias doltes.</p>
-          </div>
-
-          <div class="col-lg-5 col-md-6 col-sm-12">
-              
-              <div class="level">
-                  <div class="text">
-                      <h3>Web Design</h3>
-                      <p>90%</p>
-                  </div>
-                  <div class="progress">
-                      <div class="progress-bar progress-bar-animated bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              
-              <div class="level">
-                  <div class="text">
-                      <h3>Mobile Design</h3>
-                      <p>75%</p>
-                  </div>
-                  <div class="progress">
-                      <div class="progress-bar progress-bar-animated bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              
-              <div class="level">
-                  <div class="text">
-                      <h3>Development</h3>
-                      <p>80%</p>
-                  </div>
-                  <div class="progress">
-                      <div class="progress-bar progress-bar-animated change" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              
-              <div class="level">
-                  <div class="text">
-                      <h3>SEO</h3>
-                      <p>85%</p>
-                  </div>
-                  <div class="progress">
-                      <div class="progress-bar progress-bar-animated bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-              </div>
-              
-          </div>
-      </div>
-
       
-      <div class="row main-row justify-content-evenly" id="HERO">
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-              <img src="./Assets/svg/website-svgrepo-com.svg" alt="">
-              <h4>Web Design</h4>
-              <p>Lorem ipsum dolor atque, facilis mollitia exercitationem esse ut sed.</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-              <img src="./Assets/svg/mobile-phone-recharge-svgrepo-com.svg" alt="">
-              <h4>Mobile Design</h4>
-              <p>Lorem ipsum dolor atque, facilis mollitia s odio exercitationem esse ut sed.</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-              <img src="./Assets/svg/web-development-svgrepo-com.svg" alt="">
-              <h4>Development</h4>
-              <p>Lorem ipsum dolor atque, facilis mollitiaminus odio exercitationem esse ut sed.</p>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 text-center">
-              <img src="./Assets/svg/seo-youtube-svgrepo-com.svg" alt="">
-              <h4>SEO</h4>
-              <p>Lorem ipsum dolor atque, facilis minus odio exercitationem esse ut sed.</p>
-          </div>
-      </div>
-  </div>
-</section>
- -->
+<!-- ==================
+    SKILLS SECTION ENDS
+======================= --> 
+       
+<!-- ===============
+    PROJECTS SECTION
+==================== --> 
 
- 
-<section class="project">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <div class="project-text col-12">
-          <div>
-            <h1>My Projects</h1>
-            <p>Check out some of my projects with creative ideas</p>
-          </div>
-          <button id="project" >See all projects</button>
+       <section class="projects">
+        <div class="title-wrapper">
+          <p class="section-subtitle">Our Works</p>
+          <h1 class="section-title">Projects</h1>
+          <p class="section-text">Explore some of our recent projects in web design, UX/UI and branding.</p>
         </div>
-      </div>
-    </div>
-  
-    <div class="container">
-      <div class="row" id="projects-container">
-        <!-- Project cards will be dynamically inserted here -->
-      </div>
-    </div>
-  </section>
-  
-  <!-- Modal -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 id="modal-title">Project Title</h2>
-        <span class="close" onclick="closeModal()">&times;</span>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-8">
-          <div class="modal-body">
-            <img id="modal-image" src="" alt="Project Image" class="modal-image">
+      
+        <div class="slider-wrapper">
+          <div class="slider" id="portfolioSlider">
+            <ul class="slider-container" id="sliderContainer">
+              <li class="slider-item">
+                <div class="projects-card">
+                  <img src="./Assets/images/portfolio-1.jpg" class="img-cover" alt="portfolio">
+                  <div class="card-content">
+                    <h3 class="card-title">SyntherX</h3>
+                    <p class="card-text">Website Design</p>
+                    <!-- <a href="https://syntherx.com" target="_blank">Search With US</a> -->
+                  </div>
+                </div>
+              </li>
+              <li class="slider-item">
+                <div class="projects-card">
+                  <img src="./Assets/images/portfolio-2.jpg" class="img-cover" alt="portfolio">
+                  <div class="card-content">
+                    <h3 class="card-title">Software Agency</h3>
+                    <p class="card-text">Web Development</p>
+                    <!-- <a href="https://syntherx.com" target="_blank">Search With US</a> -->
+                  </div>
+                </div>
+              </li>
+              <li class="slider-item">
+                <div class="projects-card">
+                  <img src="./Assets/images/portfolio-3.jpg" class="img-cover" alt="portfolio">
+                  <div class="card-content">
+                    <h3 class="card-title">Admin Portal</h3>
+                    <p class="card-text">UX/UI Design</p>
+                    <!-- <a href="https://syntherx.com" target="_blank">Search With US</a> -->
+                  </div>
+                </div>
+              </li>
+              <li class="slider-item">
+                <div class="projects-card">
+                  <img src="./Assets/images/portfolio-4.jpg" class="img-cover" alt="portfolio">
+                  <div class="card-content">
+                    <h3 class="card-title">E commerce</h3>
+                    <p class="card-text">UX & UI</p>
+                    <!-- <a href="https://syntherx.com" target="_blank">Search With US</a> -->
+                  </div>
+                </div>
+              </li>
+              <li class="slider-item">
+                <div class="projects-card">
+                  <img src="./Assets/images/portfolio-1.jpg" class="img-cover" alt="portfolio">
+                  <div class="card-content">
+                    <h3 class="card-title">Design Zoom</h3>
+                    <p class="card-text">SEO Marketing</p>
+                    <!-- <a href="https://syntherx.com" target="_blank">Search With US</a> -->
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      
+          <div class="slider-controls">
+            <button class="slider-control prev" id="prevBtn">
+              <span class="arrow left"></span>
+            </button>
+            <button class="slider-control next" id="nextBtn">
+              <span class="arrow right"></span>
+            </button>
           </div>
         </div>
-        <div class="col-12 col-lg-4">
-          <div class="pro-link">
-            <h4>Project Link</h4>
-            <a id="modal-link" href="" target="_blank"></a>
+      </section>
+<!-- ====================
+    PROJECTS SECTION ENDS
+========================= --> 
+
+<!-- ==================
+PROJECTS MODAL START
+======================= --> 
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="modal-title">Project Title</h2>
+            <span class="close" onclick="closeModal()">&times;</span>
           </div>
-          <h4>About the Project</h4>
-          <p id="modal-description"></p>
-          <div class="skills">
-            <h3>Skills</h3>
-            <div id="modal-skills">
-              <!-- Skills will be dynamically inserted here -->
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <div class="modal-body">
+                <img id="modal-image" src="" alt="Project Image" class="modal-image">
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="pro-link">
+                <h4>Project Link</h4>
+                <a id="modal-link" href="" target="_blank"></a>
+              </div>
+              <h4>About the Project</h4>
+              <p id="modal-description"></p>
+              <div class="skills">
+                <h3>Skills</h3>
+                <div id="modal-skills">
+                  <!-- Skills will be dynamically inserted here -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+<!-- ==================
+    PROJECTS MODAL ENDS
+======================= -->       
+
+<!-- ===============
+TESTIMONIALS SECTION
+==================== --> 
+  <section class="py-5  text-white" id="reviews">
+    <div class="container">
+      <h1 class="text-center mb-4 text-dark">What People Says</h1>
+  
+      <div class="position-relative">
+        <!-- Scrollable Cards -->
+        <div id="reviewSlider" class="review-slider d-flex gap-4 flex-nowrap">
+          
+          <!-- Review 1 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Moiz’s attention to detail is incredible. Highly recommended!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>Adam Brooks</strong><br>
+                <small>Product Designer</small>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Review 2 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Very responsive and talented developer. Great experience."</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>Lisa Chan</strong><br>
+                <small>Tech Founder</small>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Review 3 -->
+          <div class="card bg-white text-dark p-3 flex-shrink-0" style="width: 300px;">
+            <p>"Delivered everything on time with excellent quality!"</p>
+            <div class="d-flex align-items-center mt-3">
+              <img src="https://randomuser.me/api/portraits/men/38.jpg" class="rounded-circle me-3" width="50" height="50" alt="Avatar">
+              <div>
+                <strong>John Smith</strong><br>
+                <small>Business Owner</small>
+              </div>
+            </div>
+          </div>
+  
+
+          <!-- Add more reviews here -->
+  
+        </div>
+  
+        <!-- Navigation arrows -->
+        <div class="text-center mt-4">
+          <button class="btn btn-outline-dark me-2 " onclick="scrollReviewSlider(-1)">&#8592;</button>
+          <button class="btn btn-outline-dark" onclick="scrollReviewSlider(1)">&#8594;</button>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  
+<!-- ====================
+TESTIMONIALS SECTION ENDS
+========================= --> 
 
 
+<!-- ==============
+    CONTACT SECTION
+=================== --> 
 
 <section class="hello">
   <div class="container">
@@ -310,30 +618,43 @@
     </div>
   </div>
 </section>
+<!-- ==================
+    CONTACT SECTION ENDS
+======================= --> 
 
+<!-- =============
+    FOOTER SECTION
+================== --> 
 <footer>
   <div class="container">
     <div class="row ">
       <p> Thank You </p>
     </div>
   </div>
-  
 </footer>
+<!-- ==================
+    FOOTER SECTION ENDS
+======================= --> 
 
 
+<!--=========
+    ARROW TOP
+============= --> 
 <div class="arrow-top">
   <a href="#Navbar">
   <ion-icon name="arrow-up-circle-outline"></ion-icon>
 </a>
 </div>
-
-
+<!-- =============
+    ARROW TOP ENDS
+================== --> 
 
 </div>
-
 </body>
+</html>
+
+<script src="./P.js" ></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</html>
