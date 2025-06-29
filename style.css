@@ -1485,6 +1485,7 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
   color: #121214;
 }
 
+
 .service-box:hover {
   border: 2px solid #ffffff;
   transform: translateY(-8px);
@@ -1493,6 +1494,25 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
   color: #ffffff !important;
 }
 
+.service-box p,
+.service-box span {
+  transition: color 0.3s ease;
+}
+
+
+.service-box:hover span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Change color of <p> and <span> when the card is hovered */
+.service-box:hover p,
+.service-box:hover span {
+  color: #ffffff !important;
+}
+
+
+/* Hover effect for <img> */
 .service-box:hover img  {
   filter: brightness(0) invert(1) !important;
 }
