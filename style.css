@@ -1320,37 +1320,49 @@ object-fit: cover;
   height: 100%;
   border-radius: 3px;
 }
-    .education-list {
-margin-top: 20px;
+.education-section p,
+.education-section h2,
+.education-section small {
+  color: #121214 !important;
 }
 
-.education-card {
-background-color: #f8f9fa;
-padding: 20px;
-border-radius: 8px;
-text-align: center;
-transition: box-shadow 0.3s ease;
+.education-section {
+  /* background-color: #121214; */
 }
 
-.education-card:hover {
-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.education-card-box {
+  border: 2px solid #121214;
+  border-radius: 0px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #121214;
 }
 
-.education-degree {
-font-size: 1.5rem;
-color: #1f1f1f;
-margin-bottom: 10px;
+.education-card-box:hover {
+  border: 2px solid #ffffff;
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  background-color: #121214 !important;
+  color: #ffffff !important;
 }
 
-.education-institute {
-font-size: 1.1rem;
-color: #6c757d;
+.education-card-box:hover p,
+.education-card-box:hover .edu-number {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
-.education-year {
-font-size: 1rem;
-color: #adb5bd;
+.edu-number {
+  color: rgba(0, 0, 0, 0.05);
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
+
+.education-card-box:hover .edu-number {
+  color: rgba(255, 255, 255, 0.25);
+}
+
 
 @media (min-width: 576px) {
   .tab-btn-list {
@@ -1470,10 +1482,6 @@ grid-template-columns: 1fr 1fr 1fr 1fr;
 .services-section p , h2 ,small {
   color: #121214 !important;
 }
-.services-section {
-  /* background-color: #121214; */
-}
-
 
 .service-box {
   border: 2px solid #121214;
