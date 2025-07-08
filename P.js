@@ -44,7 +44,7 @@ const portfolioProjects = [
   
 
   // Select all portfolio cards
-const portfolioCards = document.querySelectorAll(".portfolio-card");
+const portfolioCards = document.querySelectorAll(".projects-card");
 
 // Attach click events to each card
 portfolioCards.forEach((card, index) => {
@@ -86,3 +86,24 @@ window.onclick = function(event) {
     closeModal();
   }
 }
+
+const sliderContainer = document.getElementById("sliderContainer");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+// Amount to scroll per click (adjust based on card width + gap)
+const scrollAmount = 500;
+
+prevBtn.addEventListener("click", () => {
+  sliderContainer.scrollBy({
+    left: -scrollAmount,
+    behavior: "smooth"
+  });
+});
+
+nextBtn.addEventListener("click", () => {
+  sliderContainer.scrollBy({
+    left: scrollAmount,
+    behavior: "smooth"
+  });
+});
