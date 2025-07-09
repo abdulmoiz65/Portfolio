@@ -41,7 +41,7 @@ button:hover{
 
     /* Loader styling */
 
-    /* #loader {
+    #loader {
       border: 5px solid;
       position: fixed;
       left: 50%;
@@ -65,7 +65,8 @@ button:hover{
  
   #main-content {
       display: none;
-  } */
+  }
+/* loader end  */
 
   .sticky {
       position: fixed;

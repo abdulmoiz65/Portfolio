@@ -229,18 +229,18 @@ function scrollReviewSlider(direction) {
 }
 
 // loader 
-// document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
 
-//     let preloader = document.getElementById("loader");
-//     preloader.style.display = "block";
-// });
+    let preloader = document.getElementById("loader");
+    preloader.style.display = "block";
+});
 
-// window.addEventListener("load", function() {
+window.addEventListener("load", function() {
  
-//     let preloader = document.getElementById("loader");
-//     let mainContent = document.getElementById("main-content");
-//     setTimeout(function() {
-//         preloader.style.display = "none";
-//         mainContent.style.display = "block";
-//     }, 1000); 
-// });
+    let preloader = document.getElementById("loader");
+    let mainContent = document.getElementById("main-content");
+    setTimeout(function() {
+        preloader.style.display = "none";
+        mainContent.style.display = "block";
+    }, 1000); 
+});
