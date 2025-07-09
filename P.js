@@ -1,11 +1,11 @@
 const portfolioProjects = [
     {
-      title: "SyntherX",
-      frontImage: "/images/portfolio-3.jpg",
-      backImage: "/images/portfolio-3.jpg", // Same image or another if you want
+      title: "Agence WooJoh",
+      frontImage: "/Assets/images/agence-woojoh.com.jpg",
+      backImage: "Assets/images/agence-woojoh.com.jpg", // Same image or another if you want
       description: "A cutting-edge website design project for SyntherX's new product line.",
       link: "https://syntherx.com",
-      skills: ["HTML", "CSS", "JavaScript", "Web Design"]
+      skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "Web Design"]
     },
     {
       title: "Software Agency",

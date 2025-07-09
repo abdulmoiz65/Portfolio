@@ -15,9 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   </head>
-
   <body onload="myLoader()">
-<!-- =============
+<!--=============
     CUSTOM CURSOR 
 ================== -->
     <div class="custom-cursor"></div>
@@ -44,7 +43,9 @@
       </button>
       <ul id="nav-list">
         <li><a href="">Home</a></li>
+        <li><a href="">Skills</a></li>
         <li><a href="">Project</a></li>
+        <li><a href="">Reviews</a></li>
         <li><a href="#HERO">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -65,7 +66,7 @@
           <h4>Abdul Moiz</h4>
           <h1>Jr Software developer</h1>
           <h2>From Pakistan</h2>
-          <p>Proficiency in Web Development (Using PHP , LARAVEL and DotNet)</p>
+          <p>Proficiency in Web Development (Using PHP , LARAVEL and React)</p>
           <p>I am a passionate software developer with over a year of freelancing experience.
              Currently pursuing a Bachelor's degree in Computer Science from <span>Muhammad Ali Jinnah University</span>, I enjoy turning ideas into reality through coding. I have successfully worked on various platforms like Upwork and Freelancer, specializing in creating solutions that meet client needs</p>
               <div class="experience">
@@ -135,7 +136,7 @@
          <div class="row">
             <div class="col-lg-5 col-md-5">
               <figure class="about-banner img-holder">
-                <img src="./Assets/images/moiz5.jpeg" class="img-cover" alt="about banner">
+                <img src="./Assets/images/moiz.jpeg" class="img-cover" alt="about banner">
               </figure>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -145,15 +146,14 @@
                
                 <li class="about-item">
                   <p>Email Address</p>
-                  <span class="span h5">moiz@example.com</span>
+                  <span>abdulmoiz65.work@gmail.com</span>
                 </li>
                 <li class="about-item">
                   <p>Social Network</p>
                   <div class="social-list">
-                    <a href="#" class="social-link" title="Facebook">Fb.</a>
-                    <a href="#" class="social-link" title="LinkedIn">Ln.</a>
-                    <a href="#" class="social-link" title="GitHub">Gh.</a>
-                    <a href="#" class="social-link" title="Twitter">Tw.</a>
+                    <a href="https://pk.linkedin.com/in/abdulmoiz65" target="_blank" class="social-link" title="LinkedIn">Ln.</a>
+                    <a href="https://github.com/abdulmoiz65" target="_blank" class="social-link" title="GitHub">Gh.</a>
+                    <a href="https://x.com/abdulmoiz___65" target="_blank" class="social-link" title="Twitter">Tw.</a>
                   </div>
                 </li>
               </ul>
@@ -162,92 +162,135 @@
         </div>
         
         <!-- SKILLS  -->
-        <div class="tab-content" data-tab-content="skillset">
-          <div>
-            <h3 class="section-title">Transforming Ideas into Digital Solutions</h3>
-            <p>I specialize in creating efficient, user-centric digital solutions that enhance both functionality and aesthetics. My expertise spans across web development, design, and mobile applications, ensuring a seamless experience across platforms.</p>
-            
-            <ul class="skill-list">
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">Website Design</span>
-                  <span class="value">90%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 90%"></div>
-                </div>
-              </li>
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">Website Development</span>
-                  <span class="value">95%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 95%"></div>
-                </div>
-              </li>
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">UI / UX Design</span>
-                  <span class="value">85%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 85%"></div>
-                </div>
-              </li>
-              
-              <li>
-                <div class="skill-wrapper d-flex justify-content-between">
-                  <span class="span">Mobile Application Design</span>
-                  <span class="value">80%</span>
-                </div>
-                <div class="progress-bar">
-                  <div class="progress-fill" style="width: 80%"></div>
-                </div>
-              </li>
+        <section class="services-section py-5 text-white tab-content " data-tab-content="skillset" >
+          <div class="container">
+            <!-- Section Heading -->
+            <div class="row mb-5">
+              <div class="col-lg-6">
+                <small class="text-uppercase" style="letter-spacing: 2px;">Services That We Provide</small>
+                <h2 class="display-5 fw-bold">Services</h2>
+              </div>
+              <div class="col-lg-6">
+                <p class="text-white">
+                  Whether you're building a digital presence from scratch or improving an existing one, these are the services I offer to help you succeed.
+                </p>
+              </div>
+            </div>
         
-            </ul>
-          </div>
-        </div>
-        
+            <!-- Services Grid -->
+            <div class="row g-4">
+              <!-- Web Design & Development -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/world-wide-web.png" alt="Web Design" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">Web Design & Development</h5>
+                  <p class="text-muted">Crafting modern, responsive websites optimized for performance and user experience.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">01</span>
+                </div>
+              </div>
 
-        <!-- EDUCATION  -->
-      <div class="tab-content" data-tab-content="interview">
-          <h3 class="section-title">Education</h3>
-          <div class="education-list row">
-            <div class="col-md-3">
-              <div class="education-card">
-                <h4 class="education-degree">Matriculation</h4>
-                <p class="education-institute">Blossom High School Gulshan e iqbal karachi </p>
-                <p class="education-year">Year of Completion: 2020</p>
+              <!-- UI/UX Development -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/web-design.png" alt="UI/UX" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">UI/UX Development</h5>
+                  <p class="text-muted">Creating intuitive user interfaces and seamless user experiences tailored for your audience.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">02</span>
+                </div>
               </div>
-            </div>
-            <div class="col-md-3">
-              <div class="education-card">
-                <h4 class="education-degree">Intermediate</h4>
-                <p class="education-institute">Govt. degree college SRE-III majeed karachi</p>
-                <p class="education-year">Year of Completion: 2022</p>
+        
+              <!-- Mobile Design -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/booking.png" alt="Mobile Design" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">Mobile Design</h5>
+                  <p>Designing mobile-first experiences for Android & iOS that delight and perform.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">03</span>
+                </div>
               </div>
-            </div>
-            <div class="col-md-3">
-              <div class="education-card">
-                <h4 class="education-degree">Diploma in Software Development </h4>
-                <p class="education-institute">Aptech karachi</p>
-                <p class="education-year">year of completion: FEB 2024</p>
-              </div>
-            </div>
-            <div class=" col-md-3 ">
-              <div class="education-card">
-                <h4 class="education-degree">Bachelor's Degree</h4>
-                <p class="education-institute">Muhammad Ali Jinnah University</p>
-                <p class="education-year">Expected Completion: 2026</p>
+        
+              <!-- SEO Marketing -->
+              <div class="col-md-6 col-lg-3">
+                <div class="service-box p-4 bg-white text-dark h-100 position-relative  shadow-sm transition-hover">
+                  <div class="mb-3">
+                    <img src="./Assets/Icons/seo-search-symbol.png" alt="SEO Marketing" style="width: 50px;">
+                  </div>
+                  <h5 class="fw-bold">SEO Marketing</h5>
+                  <p>Boosting visibility and rankings with proven search engine optimization techniques.</p>
+                  <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">04</span>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+
+<!-- EDUCATION -->
+<div class="services-section py-5 text-white tab-content" data-tab-content="interview">
+  <div class="container">
+    <!-- Section Heading -->
+    <div class="row mb-5">
+      <div class="col-lg-6">
+        <small class="text-uppercase" style="letter-spacing: 2px;">My Academic Journey</small>
+        <h2 class="display-5 fw-bold">Education</h2>
+      </div>
+      <div class="col-lg-6">
+        <p class="text-white">
+          A timeline of my academic milestones that shaped my technical foundation and learning path.
+        </p>
+      </div>
+    </div>
+
+    <!-- Education Grid -->
+    <div class="row g-4">
+      <!-- Matriculation -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover">
+          <h5 class="fw-bold">Matriculation</h5>
+          <p class="text-muted">Blossom High School, Gulshan-e-Iqbal, Karachi</p>
+          <p class="text-muted">Year of Completion: 2020</p>
+          <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">01</span>
         </div>
+      </div>
+
+      <!-- Intermediate -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover">
+          <h5 class="fw-bold">Intermediate</h5>
+          <p class="text-muted">Govt. Degree College SRE-III, Majeed Karachi</p>
+          <p class="text-muted">Year of Completion: 2022</p>
+          <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">02</span>
+        </div>
+      </div>
+
+      <!-- Diploma -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover">
+          <h5 class="fw-bold">Diploma in Software Development</h5>
+          <p class="text-muted">Aptech Karachi</p>
+          <p class="text-muted">Year of Completion: Feb 2024</p>
+          <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">03</span>
+        </div>
+      </div>
+
+      <!-- Bachelor's Degree -->
+      <div class="col-md-6 col-lg-3">
+        <div class="service-box p-4 bg-white text-dark h-100 position-relative shadow-sm transition-hover">
+          <h5 class="fw-bold">Bachelor's Degree</h5>
+          <p class="text-muted">Muhammad Ali Jinnah University</p>
+          <p class="text-muted">Expected Completion: 2026</p>
+          <span class="position-absolute bottom-0 end-0 m-3 fs-4 text-body-tertiary fw-bold opacity-25">04</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         
 
         <!-- AWARDS  -->
@@ -327,7 +370,7 @@
              <li><div class="skill-card"><div class="tooltip">HTML5</div><img src="./Assets/images/html5.png" alt="HTML5 logo"></div></li>
              <li><div class="skill-card"><div class="tooltip">CSS3</div><img src="./Assets/images/css3.png" alt="CSS3 logo"></div></li>
              <li><div class="skill-card"><div class="tooltip">JavaScript</div><img src="./Assets/images/javascript.png" alt="JavaScript logo"></div></li>
-             <li><div class="skill-card"><div class="tooltip">TypeScript</div><img src="./Assets/images/typescript.png" alt="TypeScript logo"></div></li>
+             <li><div class="skill-card"><div class="tooltip">Laravel</div><img src="./Assets/images/laravel.png" alt="laravel logo"></div></li>
              <li><div class="skill-card"><div class="tooltip">PHP</div><img src="./Assets/images/php.png" alt="Php Logo"></div></li>
              <li><div class="skill-card"><div class="tooltip">MySQL</div><img src="./Assets/images/mySQL.png" alt="MySQL logo"></div></li>
              <li><div class="skill-card"><div class="tooltip">React</div><img src="./Assets/images/react.png" alt="React logo"></div></li>
@@ -378,9 +421,9 @@
             <ul class="slider-container" id="sliderContainer">
               <li class="slider-item">
                 <div class="projects-card">
-                  <img src="./Assets/images/portfolio-1.jpg" class="img-cover" alt="portfolio">
+                  <img src="./Assets/images/agence_woojoh.png" class="img-cover" alt="portfolio">
                   <div class="card-content">
-                    <h3 class="card-title">SyntherX</h3>
+                    <h3 class="card-title">Agence Woojoh</h3>
                     <p class="card-text">Website Design</p>
                     <!-- <a href="https://syntherx.com" target="_blank">Search With US</a> -->
                   </div>
@@ -440,7 +483,7 @@
         </div>
       </section>
 <!-- ====================
-    PROJECTS SECTION ENDS
+    PROJECTS SECTION ENDS 
 ========================= --> 
 
 <!-- ==================
