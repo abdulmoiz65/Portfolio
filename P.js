@@ -8,17 +8,17 @@ const portfolioProjects = [
       skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "Web Design"]
     },
     {
-      title: "Software Agency",
-      frontImage: "./images/portfolio-1.jpg",
-      backImage: "./images/portfolio-1.jpg",
+      title: "Maju University Website",
+      frontImage: "./Assets/images/maju-edu-pk.jpg",
+      backImage: "./Assets/images/maju-edu-pk-.jpg",
       description: "Full-stack development for a modern software solutions agency.",
-      link: "https://syntherx.com",
+      link: "https://maju.edu.pk",
       skills: ["React", "Node.js", "API", "UX"]
     },
     {
       title: "Admin Portal",
       frontImage: "./images/portfolio-4.jpg",
-      backImage: "./images/portfolio-4.jpg",
+      backImage: "./Assets/images/fyp_admin_full.png",
       description: "A UX/UI overhaul and branding revamp for a corporate admin system.",
       link: "https://syntherx.com",
       skills: ["Figma", "UX/UI", "Branding"]

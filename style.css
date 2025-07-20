@@ -50,7 +50,7 @@ button:hover{
       z-index: 9999;
       width: 150px; 
       height: 150px; 
-      background: url('../Assets/images/Abdul_Moiz.jpg') no-repeat center center;
+      background: url('./Assets/images/Abdul_Moiz.jpg') no-repeat center center;
       background-size: contain;
       display: block; 
       animation: spin 0.7s linear 1;
