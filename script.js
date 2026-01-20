@@ -1,17 +1,34 @@
-// jquery 
-$(document).ready(function(){
-  $('.tab-btn').on('click', function(){
+
+
+
+
+// JS 
+
+$(document).ready(function () {
+  // Existing tab button click handler
+  $('.tab-btn').on('click', function () {
     var target = $(this).data('tab-btn');
     $('.tab-btn').removeClass('active');
     $(this).addClass('active');
     $('.tab-content').removeClass('active');
     $('[data-tab-content="' + target + '"]').addClass('active');
   });
+
+  // Handle Dropdown Links
+  $('[data-tab-target]').on('click', function (e) {
+    e.preventDefault();
+    var targetTab = $(this).data('tab-target');
+
+    // Scroll to #about section
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+
+    // Trigger click on corresponding tab button after small delay to allow scroll
+    setTimeout(() => {
+      $(`button[data-tab-btn="${targetTab}"]`).trigger('click');
+    }, 300);
+  });
 });
 
-
-
-// JS 
 
 document.addEventListener('DOMContentLoaded', () => {
   const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -19,14 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const icon = hamburgerBtn.querySelector('ion-icon');
 
   hamburgerBtn.addEventListener('click', () => {
-      navList.classList.toggle('active');
-      hamburgerBtn.classList.toggle('active'); // Toggle the active class on the button
+    navList.classList.toggle('active');
+    hamburgerBtn.classList.toggle('active'); // Toggle the active class on the button
 
-      if (navList.classList.contains('active')) {
-          icon.setAttribute('name', 'close-outline');
-      } else {
-          icon.setAttribute('name', 'menu-outline');
-      }
+    if (navList.classList.contains('active')) {
+      icon.setAttribute('name', 'close-outline');
+    } else {
+      icon.setAttribute('name', 'menu-outline');
+    }
   });
 });
 
@@ -34,8 +51,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('Navbar');
+  const arrowTop = document.querySelector('.arrow-top');
 
   window.addEventListener('scroll', () => {
+    // Navbar Sticky Logic
     if (window.scrollY > 0) {
       header.classList.add('sticky');
       header.classList.remove('slow-transition');
@@ -43,9 +62,29 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('sticky');
       header.classList.add('slow-transition');
     }
+
+    // Back to Top Button Logic
+    if (arrowTop) {
+      if (window.scrollY > 300) {
+        arrowTop.style.display = 'block';
+      } else {
+        arrowTop.style.display = 'none';
+      }
+    }
   });
 
-  // Adjust scroll position on page load, in case user loads the page already scrolled
+  // Handle Back to Top Click
+  if (arrowTop) {
+    arrowTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Adjust scroll position on page load
   if (window.scrollY > 0) {
     header.classList.add('sticky');
   }
@@ -61,7 +100,7 @@ function updateCursorVisibility() {
   }
 }
 
-document.addEventListener('mousemove', function(e) {
+document.addEventListener('mousemove', function (e) {
   const cursor = document.querySelector('.custom-cursor');
   if (!cursor || window.innerWidth <= 768) return;
 
@@ -128,12 +167,12 @@ let projects = []; // Add this outside functions
 
 // Function to fetch and render projects
 async function fetchProjects() {
-try {
-  const response = await fetch('data.json'); // Adjust the path as needed
-  projects = await response.json(); // Store the fetched projects globally
-  
-  const container = document.getElementById('projects-container');
-  container.innerHTML = projects.map((project, index) => `
+  try {
+    const response = await fetch('data.json'); // Adjust the path as needed
+    projects = await response.json(); // Store the fetched projects globally
+
+    const container = document.getElementById('projects-container');
+    container.innerHTML = projects.map((project, index) => `
     <div class="col-lg-4">
       <div class="card-container" onclick="showModal(${index})">
         <div class="card">
@@ -148,28 +187,28 @@ try {
       </div>
     </div>
   `).join('');
-} catch (error) {
-  console.error('Error fetching projects:', error);
-}
+  } catch (error) {
+    console.error('Error fetching projects:', error);
+  }
 }
 
 // Function to show the modal
 function showModal(index) {
-const project = projects[index]; // Use the globally stored projects
-document.getElementById('modal-title').textContent = project.title;
-document.getElementById('modal-image').src = project.backImage;
-document.getElementById('modal-description').textContent = project.description;
-document.getElementById('modal-link').href = project.link;
-document.getElementById('modal-link').textContent = project.title;
+  const project = projects[index]; // Use the globally stored projects
+  document.getElementById('modal-title').textContent = project.title;
+  document.getElementById('modal-image').src = project.backImage;
+  document.getElementById('modal-description').textContent = project.description;
+  document.getElementById('modal-link').href = project.link;
+  document.getElementById('modal-link').textContent = project.title;
 
-// Render skills
-const skillsContainer = document.getElementById('modal-skills');
-skillsContainer.innerHTML = project.skills.map(skill => `
+  // Render skills
+  const skillsContainer = document.getElementById('modal-skills');
+  skillsContainer.innerHTML = project.skills.map(skill => `
   <span class="skill-badge">${skill}</span>
 `).join('');
 
-document.getElementById('myModal').style.display = 'block';
-document.body.style.overflow = 'hidden';
+  document.getElementById('myModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
 }
 
 // Function to close the modal
@@ -179,7 +218,7 @@ function closeModal() {
 }
 
 // Close modal when clicking outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == document.getElementById('myModal')) {
     closeModal();
   }
@@ -229,18 +268,18 @@ function scrollReviewSlider(direction) {
 }
 
 // loader 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-    let preloader = document.getElementById("loader");
-    preloader.style.display = "block";
+  let preloader = document.getElementById("loader");
+  preloader.style.display = "block";
 });
 
-window.addEventListener("load", function() {
- 
-    let preloader = document.getElementById("loader");
-    let mainContent = document.getElementById("main-content");
-    setTimeout(function() {
-        preloader.style.display = "none";
-        mainContent.style.display = "block";
-    }, 1000); 
+window.addEventListener("load", function () {
+
+  let preloader = document.getElementById("loader");
+  let mainContent = document.getElementById("main-content");
+  setTimeout(function () {
+    preloader.style.display = "none";
+    mainContent.style.display = "block";
+  }, 1000);
 });

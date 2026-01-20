@@ -1,6 +1,7 @@
-/* html {
-    scroll-behavior:smooth ;
-} */
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1145,19 +1146,36 @@ footer p {
 /*============
     ARROW TOP
 ============== */
-.arrow-top ion-icon {
+.arrow-top {
   position: fixed;
-  bottom: 75px;
+  bottom: 20px;
   right: 25px;
-  width: 55px;
-  height: 55px;
+  z-index: 1000;
+  display: none;
+  /* Hidden by default, toggled by JS */
+}
+
+.arrow-top ion-icon {
+  width: 50px;
+  height: 50px;
   color: black;
-  scroll-behavior: smooth;
+  background: white;
+  /* Optional: adds background to make it stand out */
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.arrow-top:hover ion-icon {
+  transform: translateY(-5px);
+  color: #ff4824;
+  /* Theme accent */
 }
 
 @media (max-width: 768px) {
-  .arrow-top ion-icon {
-    display: none;
+  .arrow-top {
+    bottom: 15px;
+    right: 15px;
   }
 }
 
@@ -1770,3 +1788,98 @@ small {
 /* ================
 SERVICES STYLING END 
 =================== */
+
+/* Navbar Dropdown Styles */
+#nav-list .dropdown {
+  position: relative;
+}
+
+#nav-list .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  border-radius: 5px;
+  padding: 10px 0;
+  z-index: 1000;
+  list-style: none;
+  /* Ensure no bullets */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#nav-list .dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+}
+
+#nav-list .dropdown-menu li {
+  margin: 0;
+  /* Reset header nav ul li margin */
+  display: block;
+}
+
+#nav-list .dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+  /* Slightly smaller than main nav */
+  white-space: nowrap;
+}
+
+#nav-list .dropdown-menu a:hover {
+  background-color: #f1f1f1;
+  color: #ff4824;
+  /* Theme accent color */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  header nav ul {
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+  }
+
+  header nav ul li {
+    width: 100%;
+    /* Ensure full width for centering */
+  }
+
+  #nav-list .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    display: block !important;
+    /* Always show sub-items on mobile */
+    opacity: 1 !important;
+    padding: 0;
+    background-color: transparent !important;
+    margin-top: 5px;
+    min-width: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav-list .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  #nav-list .dropdown-menu li {
+    margin: 5px 0;
+  }
+
+  #nav-list .dropdown-menu a {
+    color: #555;
+    /* Slightly lighter color to distinguish sub-items */
+    padding: 5px 0;
+    font-size: 0.85rem;
+    display: inline-block;
+    /* Helps with centering */
+  }
+}
