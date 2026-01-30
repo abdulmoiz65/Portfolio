@@ -903,6 +903,10 @@ SkILLS AND TOOLS SECTION ENDS
   margin-bottom: 20px;
 }
 
+.modal-image:last-child {
+  margin-bottom: 0;
+}
+
 .modal-description {
   font-size: 16px;
   line-height: 1.5;
